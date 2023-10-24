@@ -36,8 +36,7 @@ Harry's Salon is in need of an electronic booking system to manage appointments,
 ## Development Team
 
 - [Assil Attiah](https://github.com/AssilAttiah)
-- [Assil Attiah](https://github.com/AssilAttiah)
-- [Team Member 2](https://github.com/username2)
+- [Ali Selimi](https://github.com/AliSelimi)
 - [Aleksander H. Ellegård](https://github.com/AlekOmOm)
 
 ## Acknowledgments
