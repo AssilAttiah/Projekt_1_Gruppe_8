@@ -35,17 +35,9 @@ Harry's Salon is in need of an electronic booking system to manage appointments,
 
 ## Development Team
 
-- [Team Member 1](https://github.com/username1)
+- [Team Member 1](https://github.com/AssilAttiah)
 - [Team Member 2](https://github.com/username2)
-- [Team Member 3](https://github.com/username3)
-
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+- [Team Member 3](https://github.com/AlekOmOm)
 
 ## Acknowledgments
 
