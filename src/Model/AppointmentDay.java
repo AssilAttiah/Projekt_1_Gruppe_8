@@ -4,6 +4,11 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+// function of Class: Appointment
+/*
+    Manages appointments for a specific day, checks if the day is a weekend, and holds an ArrayList of appointments.
+*/
+
 public class AppointmentDay {
     private LocalDate date;
     private boolean weekend = false;
