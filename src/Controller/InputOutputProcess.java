@@ -10,7 +10,7 @@ package src.Controller;
 import src.View.UserInputScanner;
 
 public class InputOutputProcess {
-    private static UserInputScanner scan = new UserInputScanner();
+
 
 
 
