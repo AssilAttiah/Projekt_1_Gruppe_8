@@ -14,5 +14,5 @@ public abstract class Interface {
         System.out.println("Harry's Salon electronic booking system");
     }
 
-    
+
 }

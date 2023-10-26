@@ -7,8 +7,10 @@ package src.Controller;
         UI information <- IO Process <- Model
 */
 
+import src.View.UserInputScanner;
+
 public class InputOutputProcess {
-    private static Scanner scan = new Scanner();
+    private static UserInputScanner scan = new UserInputScanner();
 
 
 
