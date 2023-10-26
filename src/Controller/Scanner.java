@@ -1,5 +1,4 @@
 package src.Controller;
 
-public class UserInput {
-
+public class Scanner {
 }
