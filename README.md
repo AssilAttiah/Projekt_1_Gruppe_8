@@ -20,6 +20,41 @@ Harry's Salon is in need of an electronic booking system to manage appointments,
 3. **Appointment Management**: Create, view, and delete appointments.
 4. **Payment Management**: Handle payments and keep track of credits.
 
+## Code Design pattern
+
+### MVP 
+1. Model
+    What it is:
+       The Model represents the data and the business rules controlling it.
+       It communicates to the database and updates the View whenever the data changes.
+    Responsibilities:
+      - Data access and storage.
+      - Business logic and calculations.
+      - Data update notifications (to the View).
+3. View
+    What it is:
+       The View represents the UI of the application.
+       It displays data from the Model to the user and sends commands to the Model.
+    Responsibilities:
+      - Display data (provided by the Model).
+      - User interface elements (e.g., text boxes, buttons).
+      - User experience (e.g., data presentation format).
+5. Controller
+    What it is:
+       The Controller acts as an interface between Model and View.
+       It takes the user input from the View, processes it (with possible updates to the Model), and returns the output display      to the View.
+    Responsibilities:
+      - Receive user input.
+      - Validate user input.
+      - Update the Model based on user input.
+
+7. How They Interact
+  1. User interacts with the View: The user performs an action like clicking a button.
+  2. Controller handles the input: The View forwards the user input to the Controller.
+  3. Controller updates the Model: Based on the user input, the Controller will make the appropriate calls to update the Model.
+  4. Model updates the View: Once the Model is updated, it notifies the View.
+  5. View updates the UI: Finally, the View will update the UI to reflect the changes in the Model.
+
 ## Technologies Used
 
 - Java
