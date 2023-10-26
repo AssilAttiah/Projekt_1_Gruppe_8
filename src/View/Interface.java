@@ -12,7 +12,7 @@ public abstract class Interface {
 
     public static void startProgram(){
         System.out.println("Harry's Salon electronic booking system");
-
     }
 
+    
 }
