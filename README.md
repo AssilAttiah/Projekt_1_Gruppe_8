@@ -49,11 +49,11 @@ Harry's Salon is in need of an electronic booking system to manage appointments,
       - Update the Model based on user input.
 
 4. How They Interact
-  1. User interacts with the View: The user performs an action like clicking a button.
-  2. Controller handles the input: The View forwards the user input to the Controller.
-  3. Controller updates the Model: Based on the user input, the Controller will make the appropriate calls to update the Model.
-  4. Model updates the View: Once the Model is updated, it notifies the View.
-  5. View updates the UI: Finally, the View will update the UI to reflect the changes in the Model.
+  a. User interacts with the View: The user performs an action like clicking a button.
+  b. Controller handles the input: The View forwards the user input to the Controller.
+  c. Controller updates the Model: Based on the user input, the Controller will make the appropriate calls to update the Model.
+  d. Model updates the View: Once the Model is updated, it notifies the View.
+  e. View updates the UI: Finally, the View will update the UI to reflect the changes in the Model.
 
 ## Technologies Used
 
