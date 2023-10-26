@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29374587-5606-4853-b2ea-b7df0e9b76f0" name="Changes" comment="View and Controller classes">
-      <change afterPath="$PROJECT_DIR$/src/View/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/InputOutputProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InputOutputProcess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Scanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Scanner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Interface.java" afterDir="false" />
-    </list>
+    <list default="true" id="29374587-5606-4853-b2ea-b7df0e9b76f0" name="Changes" comment="1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +69,7 @@
       <workItem from="1698139389025" duration="964000" />
       <workItem from="1698225650109" duration="83000" />
       <workItem from="1698315427861" duration="142000" />
-      <workItem from="1698315705679" duration="6100000" />
+      <workItem from="1698315705679" duration="6447000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -117,16 +111,33 @@
       <option name="project" value="LOCAL" />
       <updated>1698322014508</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Menu and UserInputScanner.java">
+      <option name="closed" value="true" />
+      <created>1698322804657</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1698322804657</updated>
+    </task>
+    <task id="LOCAL-00007" summary="1">
+      <option name="closed" value="true" />
+      <created>1698322880124</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1698322880124</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1" />
     <MESSAGE value="View and Controller classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="View and Controller classes" />
+    <MESSAGE value="Menu and UserInputScanner.java" />
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
