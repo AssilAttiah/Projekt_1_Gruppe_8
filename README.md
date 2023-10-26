@@ -24,7 +24,6 @@ Harry's Salon is in need of an electronic booking system to manage appointments,
 
 ### MVC design pattern - Model-View-Controller: 
 1. Model
-
     What it is:
        The Model represents the data and the business rules controlling it.
        It communicates to the database and updates the View whenever the data changes.
@@ -33,8 +32,8 @@ Harry's Salon is in need of an electronic booking system to manage appointments,
       - Data access and storage.
       - Business logic and calculations.
       - Data update notifications (to the View).
+        
 3. View
-
     What it is:
        The View represents the UI of the application.
        It displays data from the Model to the user and sends commands to the Model.
@@ -45,7 +44,6 @@ Harry's Salon is in need of an electronic booking system to manage appointments,
       - User experience (e.g., data presentation format).
         
 5. Controller
-   
     What it is:
        The Controller acts as an interface between Model and View.
        It takes the user input from the View, processes it (with possible updates to the Model), and returns the output display      to the View.
