@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29374587-5606-4853-b2ea-b7df0e9b76f0" name="Changes" comment="1">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="29374587-5606-4853-b2ea-b7df0e9b76f0" name="Changes" comment="dunno">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/InputOutputProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InputOutputProcess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Appointment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/AppointmentDay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/AppointmentDay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Calendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Calendar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +92,7 @@
       <workItem from="1698225650109" duration="83000" />
       <workItem from="1698315427861" duration="142000" />
       <workItem from="1698315705679" duration="7058000" />
-      <workItem from="1698399653687" duration="10473000" />
+      <workItem from="1698399653687" duration="11865000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -167,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698323785481</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="dunno">
+      <option name="closed" value="true" />
+      <created>1698412538848</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1698412538852</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,7 +176,8 @@
     <MESSAGE value="View and Controller classes" />
     <MESSAGE value="Menu and UserInputScanner.java" />
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="dunno" />
+    <option name="LAST_COMMIT_MESSAGE" value="dunno" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
