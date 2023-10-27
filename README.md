@@ -11,7 +11,7 @@ Harry's Salon is in need of an electronic booking system to manage appointments,
 ### Core Features
 
 1. **Electronic Booking System**: A console-based single-user system to manage all bookings.
-2. **User-Friendly src.View.Interface**: An intuitive interface that displays only necessary information.
+2. **User-Friendly src.View.UserInterface**: An intuitive interface that displays only necessary information.
 
 ### Nice-to-Have Features
 

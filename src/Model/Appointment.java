@@ -6,6 +6,7 @@ package src.Model;
 */
 public class Appointment {
     private boolean booked = false;
+    private boolean paid = true;
     private String customerName;
 
     Appointment (){}
@@ -16,5 +17,9 @@ public class Appointment {
 
     public void cancel(){
         booked = false;
+    }
+
+    public void creditPayment(){
+        paid = true;
     }
 }

@@ -5,7 +5,7 @@ public class Main {
         run();
     }
     private static void run(){
-
-        Interface.startProgram();
+        UserInterface ui = new UserInterface();
+        ui.startProgram();
     }
 }

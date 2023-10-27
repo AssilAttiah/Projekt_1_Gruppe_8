@@ -28,8 +28,28 @@ public class AppointmentDay {
 
     // methods:
 
-    // 1. get & set methods
-    public ArrayList<Appointment> getAppointments() {
+    // 1. CRUD Methods:
+    public void createDay() {
+        Appointment appointment = new Appointment();
+        appointments.add(appointment);
+    }
+    public void readDay() {
+        for (Appointment appointment : appointments) {
+            System.out.println(appointment);
+        }
+    }
+    public void updateDay() { // update method for updating appointments when a appointment in the day changes state
+
+
+    }
+    public void clearDay() { // delete method for clearing appointments of the day
+        for (Appointment appointment : appointments) {
+            appointment.cancel();
+        }
+    }
+
+    // getters:
+    public ArrayList<Appointment> getDay() {
         return appointments;
     }
     public boolean getIsWeekend() {
@@ -39,9 +59,9 @@ public class AppointmentDay {
         return date;
     }
 
+
     // 2. check methods:
-    // check if the day is weekend:
-    private boolean isWeekend() {
+    private boolean isWeekend() {       // check if the day is weekend
         DayOfWeek day = date.getDayOfWeek();
         return day == DayOfWeek.SATURDAY || day == DayOfWeek.SUNDAY;
     }
