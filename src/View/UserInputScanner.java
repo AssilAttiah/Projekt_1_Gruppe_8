@@ -23,6 +23,10 @@ public class UserInputScanner {
         return scanner.next();
     }
 
+    public double getDoubleInput(){
+        return scanner.nextDouble();
+    }
+
     // Add more methods for different types of inputs
 }
 

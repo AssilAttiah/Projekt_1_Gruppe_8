@@ -1,13 +1,36 @@
 package src.View;
 
 
-public class Menu {
+import src.Model.Appointment;
+import src.Model.Calendar;
+
+
+public class Menu extends Appointment {
     private UserInputScanner userInputScanner; // object instantiation
 
     public Menu() {
         this.userInputScanner = new UserInputScanner();
     }
 
+    public void viewApp() {
+        while (true){
+            System.out.println("Delete");
+            int choice = userInputScanner.getIntInput();
+        }
+    }
+
+    public void createApp() {
+        while (true){
+            System.out.println("Which date would you like to pick?");
+            double dchoice= userInputScanner.getDoubleInput();
+            checkDate();
+
+            System.out.println("Which time would you like to pick?");
+            double tchoice= userInputScanner.getDoubleInput();
+            checkTime();
+            break;
+        }
+    }
 
     public void displayMenu() {
         while (true) {
@@ -20,10 +43,10 @@ public class Menu {
 
             switch (choice) {
                 case 1:
-                    // View Appointments
+                    viewApp();
                     break;
                 case 2:
-                    // Create Appointment
+                    createApp();
                     break;
                 case 3:
                     // Exit

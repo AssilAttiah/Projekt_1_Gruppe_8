@@ -13,6 +13,7 @@ public class AppointmentDay {
     private LocalDate date;
     private boolean weekend = false;
     private ArrayList<Appointment> appointments;
+    int dayNumber;
 
     // constructor:
     /*
@@ -20,10 +21,11 @@ public class AppointmentDay {
         2. checks if the date is weekend
         3. creates an arraylist of appointments for the day
     */
-    public AppointmentDay(LocalDate date) {
+    public AppointmentDay(LocalDate date, int dayNumber) {
         this.date = date;
         this.weekend = isWeekend();
         this.appointments = new ArrayList<>(8);     // 8 hrs (appointments) in a day: 10-18.
+        this.dayNumber = dayNumber;
     }
 
     // methods:

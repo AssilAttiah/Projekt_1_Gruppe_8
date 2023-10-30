@@ -21,6 +21,11 @@ public class Calendar {
         fillCurrentWeek();
     }
 
+    public void showCalendar(){
+        System.out.printf("");
+    }
+
+
     private void fillCurrentWeek () {
         for (int i = 0; i < WEEK_LENGTH; i++) {
             currentWeek.add(month.get(i));
