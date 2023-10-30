@@ -1,5 +1,7 @@
 package src.Model;
 
+import java.awt.*;
+
 // function of Class: Appointment
 /*
     Manages individual appointments, with methods to book and cancel.
