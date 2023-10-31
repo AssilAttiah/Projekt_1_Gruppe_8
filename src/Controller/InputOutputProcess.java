@@ -19,7 +19,7 @@ public class InputOutputProcess {
     IOProcessing io = new IOProcessing();
 
 
-    InputOutputProcess () {
+    public InputOutputProcess () {
         now = LocalDate.now();
     }
 
