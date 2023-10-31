@@ -4,22 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29374587-5606-4853-b2ea-b7df0e9b76f0" name="Changes" comment="getDateInput method">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="29374587-5606-4853-b2ea-b7df0e9b76f0" name="Changes" comment="setup InputOutputProcess.class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HarrysSalon/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HarrysSalon/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HarrysSalon/src/Controller/InputOutputProcess.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HarrysSalon/src/Controller/InputOutputProcess.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HarrysSalon/src/Model/Appointment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HarrysSalon/src/Model/Appointment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HarrysSalon/src/Model/AppointmentDay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HarrysSalon/src/Model/AppointmentDay.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HarrysSalon/src/Model/Calendar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HarrysSalon/src/Model/Calendar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HarrysSalon/src/View/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HarrysSalon/src/View/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HarrysSalon/src/View/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HarrysSalon/src/View/UserInterface.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/InputOutputProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InputOutputProcess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Appointment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Calendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Calendar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/UserInputScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/UserInputScanner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/UserInterface.java" afterDir="false" />
     </list>
     <list id="345e37ba-7ac4-4a6a-ba98-d000035539fc" name="Changes by aliselimi" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +96,7 @@
       <workItem from="1698315427861" duration="142000" />
       <workItem from="1698315705679" duration="7058000" />
       <workItem from="1698399653687" duration="11865000" />
-      <workItem from="1698741040218" duration="3414000" />
+      <workItem from="1698741040218" duration="4871000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -183,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698412538852</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="setup InputOutputProcess.class">
+      <option name="closed" value="true" />
+      <created>1698744656093</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1698744656093</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +190,8 @@
     <MESSAGE value="1" />
     <MESSAGE value="dunno" />
     <MESSAGE value="getDateInput method" />
-    <option name="LAST_COMMIT_MESSAGE" value="getDateInput method" />
+    <MESSAGE value="setup InputOutputProcess.class" />
+    <option name="LAST_COMMIT_MESSAGE" value="setup InputOutputProcess.class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
