@@ -3,6 +3,7 @@ package src.Model;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 // function of Class: Appointment
 /*
@@ -21,6 +22,16 @@ public class AppointmentDay {
         2. checks if the date is weekend
         3. creates an arraylist of appointments for the day
     */
+
+    public List<Integer> availableTimes() {
+        List<Integer> availableTimeSlots = new ArrayList<>();
+        for (int i = 0; i < appointments.size(); i++) {
+            if (appointments.get(i) == null) {
+                availableTimeSlots.add(i);
+            } // if-statement
+        } // for-loop
+        return availableTimeSlots;
+    }
     public AppointmentDay(LocalDate date, int dayNumber) {
         this.date = date;
         this.weekend = isWeekend();
@@ -33,7 +44,6 @@ public class AppointmentDay {
     // 1. CRUD Methods:
    public void createBooking(int time, String name) {
         appointments.get(time).book(name);
-        appointments.add(appointment);
     }
 
     public void readDay() {
