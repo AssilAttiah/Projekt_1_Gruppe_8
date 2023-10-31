@@ -16,14 +16,25 @@ import java.util.Arrays;
 public class Calendar {
     private final int MONTH_LENGTH = 31; // constant
     private final int WEEK_LENGTH = 7; // constant
-    private ArrayList<AppointmentDay> month = new ArrayList<AppointmentDay>(31);
-    private ArrayList<AppointmentDay> currentWeek = new ArrayList<AppointmentDay>(7);
+    public ArrayList<AppointmentDay> month = new ArrayList<AppointmentDay>(31);
+    protected ArrayList<AppointmentDay> currentWeek = new ArrayList<AppointmentDay>(7);
 
-    public void checkDate(String name, LocalDate date) {
+    public void checkDate(String name, int date) {
+
     }
 
-    public void checkTime(String name, LocalDate date, double time) {
+    public void showDay(int dateNr) {
+        System.out.println("Day: ");
+        month.get(dateNr).readDay();
+        System.out.println("Available Times: ");
+        for (int i = 0; i < WEEK_LENGTH; i++) {
+            int date = dateNr + i;
+            System.out.println(month.get(date).availableTimes());
+            int[] availableTimes = {1,2,4,5};
+
+        }
     }
+
 
     public Calendar() {
         fillCurrentWeek();
@@ -34,14 +45,14 @@ public class Calendar {
     }
 
     private void fillCurrentWeek () {
+
         for (int i = 0; i < WEEK_LENGTH; i++) {
+
             currentWeek.add(month.get(i));
         }
     }
 
-    public void getDate(LocalDate date) {
 
-    }
 
 
 

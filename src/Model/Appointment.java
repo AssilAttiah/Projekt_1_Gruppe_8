@@ -6,13 +6,14 @@ import java.awt.*;
 /*
     Manages individual appointments, with methods to book and cancel.
 */
-public class Appointment extends Menu {
+public class Appointment {
     private boolean dbooked = false;
     private boolean paid = true;
     private boolean tbooked = false;
     private String customerName;
 
-    public void book() {
+    public void book(String name) {
+        customerName = name;
         dbooked = true;
     }
 
@@ -41,5 +42,9 @@ public class Appointment extends Menu {
         } else {
             System.out.println("Time Not Available");
         }
+    }
+
+    public String toString () {
+        return "Appointment: " + customerName + " " + dbooked + " " + tbooked + " " + paid;
     }
 }

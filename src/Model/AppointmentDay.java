@@ -31,10 +31,11 @@ public class AppointmentDay {
     // methods:
 
     // 1. CRUD Methods:
-    public void createDay() {
-        Appointment appointment = new Appointment();
+   public void createBooking(int time, String name) {
+        appointments.get(time).book(name);
         appointments.add(appointment);
     }
+
     public void readDay() {
         for (Appointment appointment : appointments) {
             System.out.println(appointment);

@@ -13,9 +13,15 @@ import src.View.UserInputScanner;
 import java.time.LocalDate;
 
 public class InputOutputProcess {
-
+    LocalDate now;
+    int daysFromNow;
     public static Calendar calendar = new Calendar();
+    IOProcessing io = new IOProcessing();
 
+
+    InputOutputProcess () {
+        now = LocalDate.now();
+    }
 
     // Methods:
 
@@ -28,17 +34,35 @@ public class InputOutputProcess {
     */
 
 
+
+    public void displayAvailableTimes(LocalDate date) {
+        calendar.showDay(io.getDateNr(date));
+    } //    Fetches and displays available times from the model.
+
     public void processBooking(String name, LocalDate date) {
-        calendar.getDate(date);
-    }
-
-    public void checkDate(String name, LocalDate date) {
-        calendar.checkDate(name, date);
-    }
-
-    public void checkTime(String name, LocalDate date, double time) {
-        calendar.checkTime(name, date, time);
+        calendar.month.get(io.getDateNr(date)).;
     }
 
 
+    private class IOProcessing {
+
+        private int getDateNr(LocalDate date) {
+            return io.daysFromNow(date);
+        }
+
+        public int daysFromNow(LocalDate date) {
+            return now.compareTo(date);
+        }
+
+        public void showDayAndDaysFollowing(LocalDate date) {
+
+            for (int i = 0; i < 7; i++) {
+                calendar.showDay(date);
+                date = date.plusDays(1);
+
+            }
+
+        }
+
+    }
 }
