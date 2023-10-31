@@ -40,7 +40,7 @@ public class InputOutputProcess {
     } //    Fetches and displays available times from the model.
 
     public void processBooking(String name, LocalDate date) {
-        calendar.month.get(io.getDateNr(date)).;
+        calendar.month.get(io.getDateNr(date));
     }
 
 
@@ -57,7 +57,7 @@ public class InputOutputProcess {
         public void showDayAndDaysFollowing(LocalDate date) {
 
             for (int i = 0; i < 7; i++) {
-                calendar.showDay(date);
+                calendar.showDay(getDateNr(date));
                 date = date.plusDays(1);
 
             }

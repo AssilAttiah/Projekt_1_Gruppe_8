@@ -19,8 +19,11 @@ public class Menu extends Appointment {
         name = userInputScanner.getNameInput();
     }
 
+    UserInterface calGrid=new UserInterface();
+
     public void viewApp() {
         while (true){
+            calGrid.showCalGrid();
             System.out.println("Delete");
             int choice = userInputScanner.getIntInput();
         }

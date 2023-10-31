@@ -7,18 +7,17 @@ import java.awt.*;
     Manages individual appointments, with methods to book and cancel.
 */
 public class Appointment {
-    private boolean dbooked = false;
     private boolean paid = true;
-    private boolean tbooked = false;
+    private boolean booked = false;
     private String customerName;
 
     public void book(String name) {
         customerName = name;
-        dbooked = true;
+        booked = true;
     }
 
     public void cancel() {
-        tbooked = false;
+        booked = false;
     }
 
     public void creditPayment() {
@@ -26,7 +25,7 @@ public class Appointment {
     }
 
     public void checkDate() {
-        if (!dbooked) {
+        if (!booked) {
             System.out.println("Date Approved\n");
         } else {
             System.out.println("Date Not Available");
@@ -34,7 +33,7 @@ public class Appointment {
     }
 
     public void checkTime(){
-        if (!tbooked){
+        if (!booked){
             System.out.println("Time Approved");
             System.out.println("...");
             System.out.println("Appointment Booked Into Calendar");
@@ -45,6 +44,6 @@ public class Appointment {
     }
 
     public String toString () {
-        return "Appointment: " + customerName + " " + dbooked + " " + tbooked + " " + paid;
+        return "Appointment: " + customerName + " " + booked + " " + booked + " " + paid;
     }
 }

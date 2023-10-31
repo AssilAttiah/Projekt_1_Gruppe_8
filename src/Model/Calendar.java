@@ -35,7 +35,6 @@ public class Calendar {
         }
     }
 
-
     public Calendar() {
         fillCurrentWeek();
     }
