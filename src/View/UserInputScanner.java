@@ -6,6 +6,7 @@ package src.View;
         It will be responsible for capturing user input based on the options presented.
 */
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class UserInputScanner {
@@ -13,6 +14,11 @@ public class UserInputScanner {
 
     public UserInputScanner() {
         this.scanner = new Scanner(System.in);
+    }
+
+    public String getNameInput() {
+        System.out.println("Enter name: ");
+        return scanner.next();
     }
 
     public int getIntInput() {
@@ -27,6 +33,14 @@ public class UserInputScanner {
         return scanner.nextDouble();
     }
 
+    public LocalDate getDateInput(){ //
+        return nextDate();
+    }
+
+    private LocalDate nextDate() {
+        System.out.println("Enter date in format dd-mm-yyyy: ");
+        return LocalDate.parse(scanner.next());
+    }
     // Add more methods for different types of inputs
 }
 

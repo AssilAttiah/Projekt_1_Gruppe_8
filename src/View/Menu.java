@@ -1,15 +1,22 @@
 package src.View;
 
 
+import src.Controller.InputOutputProcess;
 import src.Model.Appointment;
 import src.Model.Calendar;
+
+import java.time.LocalDate;
+import java.util.Date;
 
 
 public class Menu extends Appointment {
     private UserInputScanner userInputScanner; // object instantiation
+    InputOutputProcess ioProcess = new InputOutputProcess();
+    String name;
 
     public Menu() {
         this.userInputScanner = new UserInputScanner();
+        name = userInputScanner.getNameInput();
     }
 
     public void viewApp() {
@@ -22,12 +29,12 @@ public class Menu extends Appointment {
     public void createApp() {
         while (true){
             System.out.println("Which date would you like to pick?");
-            double dchoice= userInputScanner.getDoubleInput();
-            checkDate();
+            LocalDate dateChoice = userInputScanner.getDateInput();
+            ioProcess.checkDate(name, dateChoice);
 
             System.out.println("Which time would you like to pick?");
             double tchoice= userInputScanner.getDoubleInput();
-            checkTime();
+            ioProcess.checkTime(tchoice);
             break;
         }
     }

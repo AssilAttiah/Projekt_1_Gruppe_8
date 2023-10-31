@@ -26,14 +26,12 @@ public class Appointment extends Menu {
 
     public void checkDate() {
         if (!dbooked) {
-            System.out.println("Date Approved");
-            System.out.println("...");
-            System.out.println("Appointment Booked Into Calendar");
-            System.out.println();
+            System.out.println("Date Approved\n");
         } else {
             System.out.println("Date Not Available");
         }
     }
+
     public void checkTime(){
         if (!tbooked){
             System.out.println("Time Approved");
@@ -44,4 +42,4 @@ public class Appointment extends Menu {
             System.out.println("Time Not Available");
         }
     }
-    }
+}

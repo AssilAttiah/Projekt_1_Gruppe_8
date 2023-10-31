@@ -15,6 +15,7 @@ public class UserInterface {
 
     public void startProgram(){
         System.out.println("Harry's Salon Electronic Booking System");
+        menu.checkDate();
         menu.displayMenu();
     }
 
