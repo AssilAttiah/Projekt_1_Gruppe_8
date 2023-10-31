@@ -34,8 +34,8 @@ public class Menu extends Appointment {
 
             System.out.println("Which time would you like to pick?");
             double tchoice= userInputScanner.getDoubleInput();
-            ioProcess.checkTime(tchoice);
-            break;
+            ioProcess.checkTime(name, dateChoice,tchoice);
+                break;
         }
     }
 

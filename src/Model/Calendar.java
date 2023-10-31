@@ -19,6 +19,12 @@ public class Calendar {
     private ArrayList<AppointmentDay> month = new ArrayList<AppointmentDay>(31);
     private ArrayList<AppointmentDay> currentWeek = new ArrayList<AppointmentDay>(7);
 
+    public void checkDate(String name, LocalDate date) {
+    }
+
+    public void checkTime(String name, LocalDate date, double time) {
+    }
+
     public Calendar() {
         fillCurrentWeek();
     }

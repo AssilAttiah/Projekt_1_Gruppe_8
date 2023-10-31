@@ -35,7 +35,7 @@ public class InputOutputProcess {
         calendar.checkDate(name, date);
     }
 
-    public void checkTime(String name, LocalDate date, int time) {
+    public void checkTime(String name, LocalDate date, double time) {
         calendar.checkTime(name, date, time);
     }
 
