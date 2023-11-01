@@ -9,6 +9,7 @@ public class Menu {
     InputOutputProcess ioProcess = new InputOutputProcess();
     UserInterface ui =new UserInterface();
 
+
     String name;
 
     public Menu() {
@@ -25,13 +26,13 @@ public class Menu {
             System.out.println("5. Exit");
             int choice = userInputScanner.getIntInput();
             if (choice == 1) {
-                createBooking();
+                createBookingSubMenu createBookingSubMenu = new createBookingSubMenu();
             } else if (choice == 2) {
-                manageBooking();
+                manageBookingSubMenu manageBookingSubMenu = new manageBookingSubMenu();
             } else if (choice == 3) {
-                accessFinancialData();
+                accessFinancialDataSubMenu accessFinancialDataSubMenu = new accessFinancialDataSubMenu();
             } else if (choice == 4) {
-                addAdditionalItemsToCardAndPay();
+                addAdditionalItemsToCardAndPaySubMenu addAdditionalItemsToCardAndPaySubMenu = new addAdditionalItemsToCardAndPaySubMenu();
             } else if (choice == 5) {
                 System.out.println("Exiting...");
                 break;
