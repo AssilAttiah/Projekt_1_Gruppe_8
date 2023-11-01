@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.util.Date;
 
 
-public class Menu extends Appointment {
+public class Menu {
     private UserInputScanner userInputScanner; // object instantiation
     InputOutputProcess ioProcess = new InputOutputProcess();
     String name;
