@@ -23,15 +23,7 @@ public class AppointmentDay {
         3. creates an arraylist of appointments for the day
     */
 
-    public List<Integer> availableTimes() {
-        List<Integer> availableTimeSlots = new ArrayList<>();
-        for (int i = 0; i < appointments.size(); i++) {
-            if (appointments.get(i) == null) {
-                availableTimeSlots.add(i);
-            } // if-statement
-        } // for-loop
-        return availableTimeSlots;
-    }
+
     public AppointmentDay(LocalDate date, int dayNumber) {
         this.date = date;
         this.weekend = isWeekend();
@@ -40,6 +32,9 @@ public class AppointmentDay {
     }
 
     // methods:
+
+
+
 
     // 1. CRUD Methods:
    public void createBooking(int time, String name) {
@@ -51,6 +46,16 @@ public class AppointmentDay {
             System.out.println(appointment);
         }
     }
+    public List<Integer> readDayAvailableTimes() {
+        List<Integer> availableTimeSlots = new ArrayList<>();
+        for (int i = 0; i < appointments.size(); i++) {
+            if (appointments.get(i) == null) {
+                availableTimeSlots.add(i);
+            } // if-statement
+        } // for-loop
+        return availableTimeSlots;
+    }
+
     public void updateDay() { // update method for updating appointments when a appointment in the day changes state
 
 

@@ -10,8 +10,9 @@ import java.util.Date;
 
 
 public class Menu {
-    private UserInputScanner userInputScanner; // object instantiation
+    UserInputScanner userInputScanner;
     InputOutputProcess ioProcess = new InputOutputProcess();
+
     String name;
 
     public Menu() {
@@ -44,8 +45,8 @@ public class Menu {
 
     public void displayMenu() {
         while (true) {
-            System.out.println("1. View Appointments");
-            System.out.println("2. Create Appointment");
+            System.out.println("1. Create Appointments");
+            System.out.println("2. Manage Appointment");
             System.out.println("3. Exit");
             System.out.print("Enter your choice: ");
 
