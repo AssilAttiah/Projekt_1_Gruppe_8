@@ -8,7 +8,6 @@ package src.Controller;
 */
 
 import src.Model.Calendar;
-import src.View.UserInputScanner;
 
 import java.time.LocalDate;
 
@@ -36,7 +35,7 @@ public class InputOutputProcess {
 
 
     public void displayDateAvailableTimes(LocalDate date) {
-        calendar.showDay(io.getDateNr(date));
+        calendar.showDayAvailableTimes(io.getDateNr(date));
     }
 
 
@@ -59,7 +58,7 @@ public class InputOutputProcess {
         public void showDayAndDaysFollowing(LocalDate date) {
 
             for (int i = 0; i < 7; i++) {
-                calendar.showDay(getDateNr(date));
+                calendar.showDayAvailableTimes(getDateNr(date));
                 date = date.plusDays(1);
 
             }

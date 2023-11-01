@@ -15,7 +15,7 @@ public class AppointmentDay {
     private boolean weekend = false;
     private boolean holiday = false;
     private ArrayList<Appointment> appointments;
-    int dayNumber;
+
 
     // constructor:
     /*
@@ -46,15 +46,7 @@ public class AppointmentDay {
             System.out.println(appointment);
         }
     }
-    public List<Integer> getAvailableTimes() {
-        List<Integer> availableTimeSlots = new ArrayList<>();
-        for (int i = 0; i < appointments.size(); i++) {
-            if (!appointments.get(i).booked) {
-                availableTimeSlots.add(i);
-            }
-        } // for-loop
-        return availableTimeSlots;
-    }
+
 
     public void updateDay() { // update method for updating appointments when a appointment in the day changes state
 
@@ -67,14 +59,28 @@ public class AppointmentDay {
     }
 
     // getters:
-    public ArrayList<Appointment> getDay() {
-        return appointments;
-    }
     public boolean getIsWeekend() {
         return weekend;
     }
+    public boolean getIsHoliday() {
+        return holiday;
+    }
+
+    public ArrayList<Appointment> getDay() {
+        return appointments;
+    }
     public LocalDate getDate() {
         return date;
+    }
+
+    public List<Integer> getAvailableTimes() {
+        List<Integer> availableTimeSlots = new ArrayList<>();
+        for (int i = 0; i < appointments.size(); i++) {
+            if (!appointments.get(i).booked) {
+                availableTimeSlots.add(i);
+            }
+        } // for-loop
+        return availableTimeSlots;
     }
 
     // setters:

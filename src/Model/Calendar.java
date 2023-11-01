@@ -46,16 +46,13 @@ public class Calendar {
     }
 
 
-
-
-    public void showDay(int dateNr) {
+    public void showDayAvailableTimes(int dateNr) {
         System.out.println("Day: ");
         month.get(dateNr).readDay();
         System.out.println("Available Times: ");
         for (int i = 0; i < 7; i++) {
             int date = dateNr + i;
             System.out.println(month.get(date).getAvailableTimes());
-
 
         }
     }
@@ -81,6 +78,6 @@ public class Calendar {
 class testModel {
     public static void main(String[] args) {
         Calendar calendar = new Calendar();
-        calendar.showDay(0);
+        calendar.showDayAvailableTimes(0);
     }
 }
