@@ -1,8 +1,6 @@
 package src.Model;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 // function of Class: Calendar
 /*
@@ -29,11 +27,8 @@ public class Calendar {
         return month.get(dateNr);
     }
 
-    public void setDayAsHoliday (int dateNr) {
-        month.get(dateNr).setWeekend(true);
-    }
 
-    public void checkDate(String name, int date) {
+    public void getDate(String name, int date) {
 
     }
 
@@ -43,7 +38,7 @@ public class Calendar {
         System.out.println("Available Times: ");
         for (int i = 0; i < WEEK_LENGTH; i++) {
             int date = dateNr + i;
-            System.out.println(month.get(date).availableTimes());
+            System.out.println(month.get(date).getAvailableTimes());
             int[] availableTimes = {1,2,4,5};
 
         }

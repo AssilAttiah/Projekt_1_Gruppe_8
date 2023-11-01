@@ -48,7 +48,7 @@ public class AppointmentDay {
             System.out.println(appointment);
         }
     }
-    public List<Integer> readDayAvailableTimes() {
+    public List<Integer> getAvailableTimes() {
         List<Integer> availableTimeSlots = new ArrayList<>();
         for (int i = 0; i < appointments.size(); i++) {
             if (appointments.get(i) == null) {

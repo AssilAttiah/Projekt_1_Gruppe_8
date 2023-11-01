@@ -6,6 +6,7 @@ import java.awt.*;
 /*
     Manages individual appointments, with methods to book and cancel.
 */
+
 public class Appointment {
     private boolean paid = true;
     private boolean booked = false;
