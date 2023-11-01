@@ -10,36 +10,73 @@ import java.time.LocalDate;
 import java.util.Scanner;
 
 public class UserInputScanner {
-    private Scanner scanner;
+    Scanner scanner;
 
     public UserInputScanner() {
-        this.scanner = new Scanner(System.in);
+
+        this.scanner = newScannerErrorHandling();
+    }
+
+    private Scanner newScannerErrorHandling () {
+        try {
+            return new Scanner(System.in);
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+            return null;
+        }
     }
 
     public String getNameInput() {
         System.out.println("Enter name: ");
-        return scanner.next();
+        try {
+            return scanner.next();
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
+        return null;
     }
 
     public int getIntInput() {
-        return scanner.nextInt();
+        try {
+            return scanner.nextInt();
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
+        return 0;
     }
 
     public String getStringInput() {
-        return scanner.next();
+        try {
+            return scanner.next();
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
+        return null;
     }
 
     public double getDoubleInput(){
-        return scanner.nextDouble();
+        try {
+            return scanner.nextDouble();
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
+
+        return 0;
     }
 
-    public LocalDate getDateInput(){ //
+    public LocalDate getDateInput(){
+
         return nextDate();
     }
 
     private LocalDate nextDate() {
         System.out.println("Enter date in format dd-mm-yyyy: ");
-        return LocalDate.parse(scanner.next());
+        try {
+            return LocalDate.parse(scanner.next());
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
+        return null;
     }
     // Add more methods for different types of inputs
 }

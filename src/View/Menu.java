@@ -14,6 +14,7 @@ public class Menu {
 
     public Menu() {
         this.userInputScanner = new UserInputScanner();
+        System.out.println("Enter name: ");
         name = userInputScanner.getNameInput();
     }
 
@@ -84,4 +85,11 @@ public class Menu {
   */
 
 
+}
+
+class testMenu {
+    public static void main(String[] args) {
+        Menu menu = new Menu();
+        menu.displayMenu();
+    }
 }

@@ -2,6 +2,8 @@ package src.View;
 
 import src.Controller.InputOutputProcess;
 
+import java.time.LocalDate;
+
 public class SubMenu {
     UserInputScanner userInputScanner = new UserInputScanner();
     InputOutputProcess ioProcess = new InputOutputProcess();
@@ -40,16 +42,27 @@ class manageBookingSubMenu extends SubMenu {
         choice = userInputScanner.getIntInput();
         switch (choice) {
             case 1:
-                registerHolidays();
+                System.out.println("Register Holidays");
+                System.out.println("--------------------");
+                System.out.println("How many holiday days do you want to register?");
+                int nrOfHolidays = userInputScanner.getIntInput();
+                for (int i = 0; i < nrOfHolidays; i++) {
+                    System.out.println("Enter date: ");
+                    LocalDate dateInput = userInputScanner.getDateInput();
+                    ioProcess.registerHoliday(dateInput);
+                    System.out.println("Holiday "+ dateInput.toString() +" registered!");
+                }
+
+
                 break;
             case 2:
-                cancelBooking();
+                ioProcess.cancelBooking();
                 break;
             case 3:
-                changeBooking();
+                ioProcess.changeBooking();
                 break;
             case 4:
-                payLater();
+                ioProcess.payLater();
                 break;
             default:
                 System.out.println("Invalid input");
