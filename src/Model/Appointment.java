@@ -20,9 +20,13 @@ public class Appointment {
         booked = false;
     }
 
-    public void creditPayment() {
+    public void useCreditDelayPayment() {
+        paid = false;
+    }
+    public void payCredit() {
         paid = true;
     }
+
 
     public void checkDate() {
         if (!booked) {
