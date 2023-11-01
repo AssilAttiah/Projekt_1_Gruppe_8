@@ -26,7 +26,7 @@ public class AppointmentDay {
 
 
     public AppointmentDay() {
-        date = LocalDate.now();
+
         this.weekend = isWeekend();
         this.appointments = new ArrayList<>(8);     // 8 hrs (appointments) in a day: 10-18.
     }

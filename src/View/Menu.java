@@ -7,15 +7,15 @@ import src.Controller.InputOutputProcess;
 public class Menu {
     UserInputScanner userInputScanner;
     InputOutputProcess ioProcess = new InputOutputProcess();
-    UserInterface ui =new UserInterface();
+    UserInterface ui;
 
 
     String userName;
 
     public Menu() {
         this.userInputScanner = new UserInputScanner();
-        System.out.println("Enter username: ");
-        userName = userInputScanner.getNameInput();
+
+        userName = userInputScanner.getNameInput(userName);
     }
 
     public void displayMenu() {
@@ -28,7 +28,7 @@ public class Menu {
             int choice = userInputScanner.getIntInput();
             if (choice == 1) {
                 System.out.println("Create Booking");
-                Name = userInputScanner.getNameInput();
+
                 createBookingSubMenu createBookingSubMenu = new createBookingSubMenu();
             } else if (choice == 2) {
                 manageBookingSubMenu manageBookingSubMenu = new manageBookingSubMenu();
@@ -89,9 +89,4 @@ public class Menu {
 
 }
 
-class testMenu {
-    public static void main(String[] args) {
-        Menu menu = new Menu();
-        menu.displayMenu();
-    }
-}
+

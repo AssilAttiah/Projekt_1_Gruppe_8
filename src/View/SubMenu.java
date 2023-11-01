@@ -6,6 +6,7 @@ import java.time.LocalDate;
 
 public class SubMenu {
     UserInputScanner userInputScanner = new UserInputScanner();
+
     InputOutputProcess ioProcess = new InputOutputProcess();
 
     int choice;
@@ -20,8 +21,9 @@ class createBookingSubMenu extends SubMenu {
     public createBookingSubMenu() {
         System.out.println("Create Booking");
         System.out.println("--------------------");
+        customerName = userInputScanner.getCustomerName();
         ioProcess.displayDateAvailableTimes(userInputScanner.getDateInput());
-        ioProcess.createBooking(customerName);
+
         System.out.println("Booking successful!");
     }
 
@@ -36,14 +38,19 @@ class manageBookingSubMenu extends SubMenu {
     public manageBookingSubMenu () {
         System.out.println("Manage Booking");
         System.out.println("--------------------");
+        // customerName:
+        customerName = userInputScanner.getCustomerName();
+        // options:
         System.out.println("1. Register Holidays");
         System.out.println("2. Cancel Booking");
         System.out.println("3. Change Booking");
         System.out.println("4. Pay Later");
         System.out.println("--------------------");
+        // choice:
         System.out.println("Enter choice: ");
-
         choice = userInputScanner.getIntInput();
+
+        // menu:
         switch (choice) {
             case 1:
                 System.out.println("Register Holidays");

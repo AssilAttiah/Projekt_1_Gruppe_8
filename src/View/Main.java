@@ -6,6 +6,6 @@ public class Main {
     }
     private static void run(){
         UserInterface ui = new UserInterface();
-        ui.startProgram();
+
     }
 }

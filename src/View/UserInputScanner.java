@@ -12,6 +12,7 @@ import java.util.Scanner;
 public class UserInputScanner {
     Scanner scanner;
 
+
     public UserInputScanner() {
 
         this.scanner = newScannerErrorHandling();
@@ -26,8 +27,14 @@ public class UserInputScanner {
         }
     }
 
-    public String getNameInput() {
-        System.out.println("Enter userName: ");
+    public String getCustomerName() {
+        System.out.println("Enter customer name: ");
+        String customerName = getNameInput("customer name");
+        System.out.println("--------------------");
+        return customerName;
+    }
+    public String getNameInput(String type) {
+        System.out.println("Enter "+type+": ");
         try {
             return scanner.next();
         } catch (Exception e) {
