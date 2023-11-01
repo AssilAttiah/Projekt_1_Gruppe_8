@@ -15,11 +15,11 @@ public class Calendar {
     private final int MONTH_LENGTH = 31; // constant
     private final int WEEK_LENGTH = 7; // constant
     public ArrayList<AppointmentDay> month = new ArrayList<AppointmentDay>(31);
-    protected ArrayList<AppointmentDay> currentWeek = new ArrayList<AppointmentDay>(7);
+ //   protected ArrayList<AppointmentDay> currentWeek = new ArrayList<AppointmentDay>(7);
 
     // constructor:
     public Calendar() {
-        fillCurrentWeek();
+       // fillCurrentWeek();
     }
 
     // methods:
@@ -45,18 +45,15 @@ public class Calendar {
     }
 
 
-
-    public void showCalendar(){
-        System.out.printf("");
-    }
-
-    private void fillCurrentWeek () {
+ /*   private void fillCurrentWeek () {
 
         for (int i = 0; i < WEEK_LENGTH; i++) {
 
             currentWeek.add(month.get(i));
         }
     }
+
+  */
 
 
 
