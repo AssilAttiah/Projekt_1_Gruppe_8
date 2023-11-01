@@ -13,13 +13,24 @@ import java.util.ArrayList;
 
 public class Calendar {
     private final int MONTH_LENGTH = 31; // constant
-    private final int WEEK_LENGTH = 7; // constant
     public ArrayList<AppointmentDay> month = new ArrayList<AppointmentDay>(31);
- //   protected ArrayList<AppointmentDay> currentWeek = new ArrayList<AppointmentDay>(7);
+
+    //   private final int WEEK_LENGTH = 7; // constant
+    //   protected ArrayList<AppointmentDay> currentWeek = new ArrayList<AppointmentDay>(7);
+    // fillCurrentWeek();
+     /*   private void fillCurrentWeek () {
+
+        for (int i = 0; i < WEEK_LENGTH; i++) {
+
+            currentWeek.add(month.get(i));
+        }
+    }
+
+  */
 
     // constructor:
     public Calendar() {
-       // fillCurrentWeek();
+
     }
 
     // methods:
@@ -36,25 +47,13 @@ public class Calendar {
         System.out.println("Day: ");
         month.get(dateNr).readDay();
         System.out.println("Available Times: ");
-        for (int i = 0; i < WEEK_LENGTH; i++) {
+        for (int i = 0; i < 7; i++) {
             int date = dateNr + i;
             System.out.println(month.get(date).getAvailableTimes());
             int[] availableTimes = {1,2,4,5};
 
         }
     }
-
-
- /*   private void fillCurrentWeek () {
-
-        for (int i = 0; i < WEEK_LENGTH; i++) {
-
-            currentWeek.add(month.get(i));
-        }
-    }
-
-  */
-
 
 
 
@@ -72,4 +71,11 @@ public class Calendar {
         isAvailable(LocalDate date, LocalTime time)
  */
 
+}
+
+class testModel {
+    public static void main(String[] args) {
+        Calendar calendar = new Calendar();
+        calendar.showDay(0);
+    }
 }

@@ -30,7 +30,7 @@ public class Menu {
         }
     }
 
-    public void createApp() {
+ /*   public void createApp() {
         while (true){
             System.out.println("Which date would you like to pick?");
             LocalDate dateChoice = userInputScanner.getDateInput();
@@ -42,6 +42,8 @@ public class Menu {
                 break;
         }
     }
+
+  */
 
     public void displayMenu() {
         while (true) {
@@ -57,7 +59,7 @@ public class Menu {
                     viewApp();
                     break;
                 case 2:
-                    createApp();
+                    // createApp();
                     break;
                 case 3:
                     // Exit

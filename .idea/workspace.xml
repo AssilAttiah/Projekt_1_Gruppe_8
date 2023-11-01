@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29374587-5606-4853-b2ea-b7df0e9b76f0" name="Changes" comment="cleared Model classes &#10;- AppointmentDay class&#10;-- isWeekend -&gt; day = weekend&#10;-- isHoliday -&gt; day = holiday">
-      <change beforePath="$PROJECT_DIR$/src/Model/AppointmentDay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/AppointmentDay.java" afterDir="false" />
+    <list default="true" id="29374587-5606-4853-b2ea-b7df0e9b76f0" name="Changes" comment="outcommented 'currentWeek'">
+      <change beforePath="$PROJECT_DIR$/src/Model/Calendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Calendar.java" afterDir="false" />
     </list>
     <list id="345e37ba-7ac4-4a6a-ba98-d000035539fc" name="Changes by aliselimi" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +61,7 @@
       <recent name="C:\Users\aleke\OneDrive\. Universitet\. Github\HarrysSalon" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.testModel">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.View.Main" />
       <module name="HarrysSalon" />
@@ -75,8 +75,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="testModel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.Model.testModel" />
+      <module name="HarrysSalon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.Model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.testModel" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -99,7 +113,7 @@
       <workItem from="1698750359680" duration="627000" />
       <workItem from="1698754713272" duration="959000" />
       <workItem from="1698756300197" duration="3869000" />
-      <workItem from="1698837140528" duration="1008000" />
+      <workItem from="1698837140528" duration="1334000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -213,7 +227,31 @@
       <option name="project" value="LOCAL" />
       <updated>1698838070183</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="cleared Model classes &#10;- AppointmentDay class&#10;-- isWeekend -&gt; day = weekend&#10;-- isHoliday -&gt; day = holiday">
+      <option name="closed" value="true" />
+      <created>1698838249892</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1698838249892</updated>
+    </task>
+    <task id="LOCAL-00016" summary="refactoring">
+      <option name="closed" value="true" />
+      <created>1698838367923</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1698838367923</updated>
+    </task>
+    <task id="LOCAL-00017" summary="outcommented 'currentWeek'">
+      <option name="closed" value="true" />
+      <created>1698838430403</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1698838430403</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +268,9 @@
     <MESSAGE value="delete Extension of classes" />
     <MESSAGE value="method availableTimes -&gt; readDayAvailableTimes&#10;- for better naming (CRUD methods)" />
     <MESSAGE value="cleared Model classes &#10;- AppointmentDay class&#10;-- isWeekend -&gt; day = weekend&#10;-- isHoliday -&gt; day = holiday" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleared Model classes &#10;- AppointmentDay class&#10;-- isWeekend -&gt; day = weekend&#10;-- isHoliday -&gt; day = holiday" />
+    <MESSAGE value="refactoring" />
+    <MESSAGE value="outcommented 'currentWeek'" />
+    <option name="LAST_COMMIT_MESSAGE" value="outcommented 'currentWeek'" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
