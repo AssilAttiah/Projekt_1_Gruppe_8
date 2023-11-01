@@ -7,7 +7,9 @@ package src.Controller;
         UI information <- IO Process <- Model
 */
 
+import src.Model.Appointment;
 import src.Model.Calendar;
+import src.View.UserInputScanner;
 
 import java.time.LocalDate;
 
@@ -15,8 +17,12 @@ public class InputOutputProcess {
     LocalDate now;
     int daysFromNow;
     int dateNr;
+    LocalDate date;
+    int time;
+
     public static Calendar calendar = new Calendar();
     IOProcessing io = new IOProcessing();
+    UserInputScanner userInputScanner = new UserInputScanner();
 
     public InputOutputProcess () {
         now = LocalDate.now();
@@ -32,7 +38,27 @@ public class InputOutputProcess {
 
     public void cancelBooking() {
 
+        boolean isCancelled = false;
+
+        while (!isCancelled) {
+
+
+            if (io.findAppointment(date, time).booked) {
+                io.findAppointment(date, time).cancel();
+                isCancelled = true;
+            } else {
+                System.out.println("Appointment not booked.");
+                System.out.println("Enter date: ");
+                date = userInputScanner.getDateInput();
+                System.out.println("Enter time: ");
+                time = userInputScanner.getIntInput();
+            }
+
+
+        }
+        System.out.println("Appointment cancelled.");
     }
+
 
     public void changeBooking(){
 
@@ -66,6 +92,10 @@ public class InputOutputProcess {
 
     // inner Class IOProcessing for InputOutputProcess:
     private class IOProcessing {
+
+        private Appointment findAppointment (LocalDate date, int time) {
+            return calendar.getDay(getDateNr(date)).getAppointment(time);
+        }
 
         private int getDateNr(LocalDate date) {
             return io.daysFromNow(date);

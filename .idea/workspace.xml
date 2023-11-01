@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29374587-5606-4853-b2ea-b7df0e9b76f0" name="Changes" comment="improved flow of Menu and SubMenu for Intuitive user menu system">
+    <list default="true" id="29374587-5606-4853-b2ea-b7df0e9b76f0" name="Changes" comment="merge">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HarrysSalon/src/Controller/InputOutputProcess$IOProcessing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HarrysSalon/src/Controller/InputOutputProcess$IOProcessing.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HarrysSalon/src/Controller/InputOutputProcess.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HarrysSalon/src/Controller/InputOutputProcess.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HarrysSalon/src/Model/Appointment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HarrysSalon/src/Model/Appointment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HarrysSalon/src/Model/AppointmentDay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HarrysSalon/src/Model/AppointmentDay.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HarrysSalon/src/Model/Calendar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HarrysSalon/src/Model/Calendar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HarrysSalon/src/Model/testModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HarrysSalon/src/Model/testModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HarrysSalon/src/View/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HarrysSalon/src/View/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HarrysSalon/src/View/UserInputScanner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HarrysSalon/src/View/UserInputScanner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HarrysSalon/src/View/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HarrysSalon/src/View/UserInterface.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/InputOutputProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InputOutputProcess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/SubMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SubMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/UserInputScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/UserInputScanner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/AppointmentDay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/AppointmentDay.java" afterDir="false" />
     </list>
     <list id="345e37ba-7ac4-4a6a-ba98-d000035539fc" name="Changes by aliselimi" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -144,7 +133,7 @@
       <workItem from="1698750359680" duration="627000" />
       <workItem from="1698754713272" duration="959000" />
       <workItem from="1698756300197" duration="3869000" />
-      <workItem from="1698837140528" duration="5944000" />
+      <workItem from="1698837140528" duration="8801000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -330,7 +319,23 @@
       <option name="project" value="LOCAL" />
       <updated>1698841034504</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Menu, SubMenu and Scanner Errorhandling">
+      <option name="closed" value="true" />
+      <created>1698843506736</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1698843506736</updated>
+    </task>
+    <task id="LOCAL-00025" summary="merge">
+      <option name="closed" value="true" />
+      <created>1698843577013</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1698843577013</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +360,9 @@
     <MESSAGE value="Calendar class: method showDayAvailableTimes" />
     <MESSAGE value="Menu and SubMenu class for Reflection of Use cases" />
     <MESSAGE value="improved flow of Menu and SubMenu for Intuitive user menu system" />
-    <option name="LAST_COMMIT_MESSAGE" value="improved flow of Menu and SubMenu for Intuitive user menu system" />
+    <MESSAGE value="Menu, SubMenu and Scanner Errorhandling" />
+    <MESSAGE value="merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

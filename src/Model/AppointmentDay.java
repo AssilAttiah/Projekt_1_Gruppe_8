@@ -73,6 +73,9 @@ public class AppointmentDay {
         return date;
     }
 
+    public Appointment getAppointment(int time) {
+        return appointments.get(time);
+    }
     public List<Integer> getAvailableTimes() {
         List<Integer> availableTimeSlots = new ArrayList<>();
         for (int i = 0; i < appointments.size(); i++) {
