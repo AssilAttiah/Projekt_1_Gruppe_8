@@ -25,12 +25,10 @@ public class AppointmentDay {
     */
 
 
-    public AppointmentDay(LocalDate date, int dayNumber) {
-        this.date = date;
+    public AppointmentDay() {
+        date = LocalDate.now();
         this.weekend = isWeekend();
         this.appointments = new ArrayList<>(8);     // 8 hrs (appointments) in a day: 10-18.
-        this.dayNumber = dayNumber;
-
     }
 
     // methods:
