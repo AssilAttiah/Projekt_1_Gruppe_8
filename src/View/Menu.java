@@ -2,16 +2,12 @@ package src.View;
 
 
 import src.Controller.InputOutputProcess;
-import src.Model.Appointment;
-import src.Model.Calendar;
-
-import java.time.LocalDate;
-import java.util.Date;
 
 
 public class Menu {
     UserInputScanner userInputScanner;
     InputOutputProcess ioProcess = new InputOutputProcess();
+    UserInterface ui =new UserInterface();
 
     String name;
 
@@ -20,15 +16,56 @@ public class Menu {
         name = userInputScanner.getNameInput();
     }
 
-    UserInterface calGrid=new UserInterface();
+    public void displayMenu() {
+        while (true) {
+            System.out.println("1. Create Booking");
+            System.out.println("2. Manage Booking");
+            System.out.println("3. Access Financial Data");
+            System.out.println("4. Add Additional Items To Card And Pay");
+            System.out.println("5. Exit");
+            int choice = userInputScanner.getIntInput();
+            if (choice == 1) {
+                createBooking();
+            } else if (choice == 2) {
+                manageBooking();
+            } else if (choice == 3) {
+                accessFinancialData();
+            } else if (choice == 4) {
+                addAdditionalItemsToCardAndPay();
+            } else if (choice == 5) {
+                System.out.println("Exiting...");
+                break;
+            } else {
+                System.out.println("Invalid input");
+            }
+        }
+    }
 
+
+
+    // methods for menu options (Use cases):
+    /*
+        1. createBooking
+        2. manageBooking
+        3. accessFinancialData
+        4. addAdditionalItemsToCardAndPay
+        5. exit
+
+     */
+
+
+
+
+    /*
     public void viewApp() {
         while (true){
-            calGrid.showCalGrid();
+            ui.showCalGrid();
             System.out.println("Delete");
             int choice = userInputScanner.getIntInput();
         }
     }
+
+     */
 
  /*   public void createApp() {
         while (true){
@@ -45,31 +82,5 @@ public class Menu {
 
   */
 
-    public void displayMenu() {
-        while (true) {
-            System.out.println("1. Create Appointments");
-            System.out.println("2. Manage Appointment");
-            System.out.println("3. Exit");
-            System.out.print("Enter your choice: ");
 
-            int choice = userInputScanner.getIntInput();
-
-            switch (choice) {
-                case 1:
-                    viewApp();
-                    break;
-                case 2:
-                    // createApp();
-                    break;
-                case 3:
-                    // Exit
-                    System.exit(0);
-                    break;
-                default:
-                    System.out.println("Invalid choice. Try again.");
-                    displayMenu();
-                    break;
-            }
-        }
-    }
 }

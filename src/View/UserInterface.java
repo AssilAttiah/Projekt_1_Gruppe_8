@@ -11,6 +11,18 @@ import src.Model.Calendar;
 public class UserInterface {
     Menu menu;
 
+    UserInterface() {
+        menu = new Menu();
+    }
+
+    public void startProgram(){
+        System.out.println("Harry's Salon Electronic Booking System");
+        // menu.checkDate();
+        menu.displayMenu();
+    }
+
+
+    // calendar User Interface
     public void showCalGrid(){
         char[][] grid = new char[8][6];
 
@@ -37,15 +49,8 @@ public class UserInterface {
             }
         }
 
-    UserInterface() {
-        menu = new Menu();
-    }
 
-    public void startProgram(){
-        System.out.println("Harry's Salon Electronic Booking System");
-        // menu.checkDate();
-        menu.displayMenu();
-    }
+
 
 
 

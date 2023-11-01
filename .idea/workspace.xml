@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29374587-5606-4853-b2ea-b7df0e9b76f0" name="Changes" comment="cleaned AppointmentDay">
+    <list default="true" id="29374587-5606-4853-b2ea-b7df0e9b76f0" name="Changes" comment="Calendar class: method showDayAvailableTimes">
+      <change afterPath="$PROJECT_DIR$/src/View/subMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HarrysSalon/src/Controller/InputOutputProcess.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HarrysSalon/src/Controller/InputOutputProcess.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HarrysSalon/src/View/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HarrysSalon/src/View/UserInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/InputOutputProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InputOutputProcess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Calendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Calendar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/UserInterface.java" afterDir="false" />
     </list>
     <list id="345e37ba-7ac4-4a6a-ba98-d000035539fc" name="Changes by aliselimi" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +25,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Model/AppointmentDay.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -117,7 +119,7 @@
       <workItem from="1698750359680" duration="627000" />
       <workItem from="1698754713272" duration="959000" />
       <workItem from="1698756300197" duration="3869000" />
-      <workItem from="1698837140528" duration="1984000" />
+      <workItem from="1698837140528" duration="3327000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -271,7 +273,23 @@
       <option name="project" value="LOCAL" />
       <updated>1698838830993</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="flow of information for Model -&gt; InputOutputProcess. improved">
+      <option name="closed" value="true" />
+      <created>1698839383796</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1698839383796</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Calendar class: method showDayAvailableTimes">
+      <option name="closed" value="true" />
+      <created>1698839549219</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1698839549219</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +310,9 @@
     <MESSAGE value="outcommented 'currentWeek'" />
     <MESSAGE value="outcommented for testing &#10;and cleaning up" />
     <MESSAGE value="cleaned AppointmentDay" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaned AppointmentDay" />
+    <MESSAGE value="flow of information for Model -&gt; InputOutputProcess. improved" />
+    <MESSAGE value="Calendar class: method showDayAvailableTimes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Calendar class: method showDayAvailableTimes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
