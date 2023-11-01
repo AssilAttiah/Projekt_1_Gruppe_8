@@ -10,12 +10,12 @@ public class Menu {
     UserInterface ui =new UserInterface();
 
 
-    String name;
+    String userName;
 
     public Menu() {
         this.userInputScanner = new UserInputScanner();
-        System.out.println("Enter name: ");
-        name = userInputScanner.getNameInput();
+        System.out.println("Enter username: ");
+        userName = userInputScanner.getNameInput();
     }
 
     public void displayMenu() {
@@ -27,6 +27,8 @@ public class Menu {
             System.out.println("5. Exit");
             int choice = userInputScanner.getIntInput();
             if (choice == 1) {
+                System.out.println("Create Booking");
+                Name = userInputScanner.getNameInput();
                 createBookingSubMenu createBookingSubMenu = new createBookingSubMenu();
             } else if (choice == 2) {
                 manageBookingSubMenu manageBookingSubMenu = new manageBookingSubMenu();
@@ -73,11 +75,11 @@ public class Menu {
         while (true){
             System.out.println("Which date would you like to pick?");
             LocalDate dateChoice = userInputScanner.getDateInput();
-            ioProcess.checkDate(name, dateChoice);
+            ioProcess.checkDate(userName, dateChoice);
 
             System.out.println("Which time would you like to pick?");
             double tchoice= userInputScanner.getDoubleInput();
-            ioProcess.checkTime(name, dateChoice,tchoice);
+            ioProcess.checkTime(userName, dateChoice,tchoice);
                 break;
         }
     }

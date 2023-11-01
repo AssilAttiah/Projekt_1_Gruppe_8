@@ -19,6 +19,10 @@ public class InputOutputProcess {
     int dateNr;
     LocalDate date;
     int time;
+    LocalDate newDate;
+    int newTime;
+    static boolean isFound;
+    String customerName;
 
     public static Calendar calendar = new Calendar();
     IOProcessing io = new IOProcessing();
@@ -26,44 +30,52 @@ public class InputOutputProcess {
 
     public InputOutputProcess () {
         now = LocalDate.now();
+        
     }
 
     // Methods:
     // 1. subMenu methods:
+    public void createBooking (String customerName) {
+        io.getDateTime();
+        io.processBooking(customerName, date, time);
+    }
+    
     public void registerHoliday(LocalDate date) {
         dateNr = io.getDateNr(date);
         calendar.getDay(dateNr).setDayAsHoliday();
-
     }
 
     public void cancelBooking() {
+
+        io.getDateTime();
 
         boolean isCancelled = false;
 
         while (!isCancelled) {
 
-
             if (io.findAppointment(date, time).booked) {
                 io.findAppointment(date, time).cancel();
                 isCancelled = true;
             } else {
-                System.out.println("Appointment not booked.");
-                System.out.println("Enter date: ");
-                date = userInputScanner.getDateInput();
-                System.out.println("Enter time: ");
-                time = userInputScanner.getIntInput();
+                System.out.println("Appointment not found.");
+                System.out.println("--------------------");
+                io.getDateTime();
             }
 
-
         }
-        System.out.println("Appointment cancelled.");
-    }
 
+    }
 
     public void changeBooking(){
 
-    }
+        io.findAppointmentWhileLoop();
 
+        io.findAppointment(date, time).cancel();
+
+
+
+    }
+    
     public void payLater(){
 
 
@@ -85,16 +97,45 @@ public class InputOutputProcess {
     }
 
 
-    public void processBooking(String name, LocalDate date) {
-        calendar.month.get(io.getDateNr(date));
-    }
+
 
 
     // inner Class IOProcessing for InputOutputProcess:
     private class IOProcessing {
 
+        private void findAppointmentWhileLoop() {
+            System.out.println("Lets find your appointment!");
+            getDateTime();
+
+            isFound = false;
+
+            while (!isFound) {
+
+                if (io.findAppointment(date, time).booked) {
+
+                    isFound = true;
+                } else {
+                    System.out.println("Appointment not found.");
+                    System.out.println("--------------------");
+                    getDateTime();
+                }
+            }
+        }
+
+        private void getDateTime() {
+            System.out.println("Enter date: ");
+            date = userInputScanner.getDateInput();
+            System.out.println("Enter time: ");
+            time = userInputScanner.getIntInput();
+        }
+
         private Appointment findAppointment (LocalDate date, int time) {
             return calendar.getDay(getDateNr(date)).getAppointment(time);
+        }
+
+
+        public void processBooking(String customerName, LocalDate date, int time) {
+            calendar.month.get(getDateNr(date)).getAppointment(time).book(customerName);
         }
 
         private int getDateNr(LocalDate date) {

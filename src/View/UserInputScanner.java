@@ -27,7 +27,7 @@ public class UserInputScanner {
     }
 
     public String getNameInput() {
-        System.out.println("Enter name: ");
+        System.out.println("Enter userName: ");
         try {
             return scanner.next();
         } catch (Exception e) {

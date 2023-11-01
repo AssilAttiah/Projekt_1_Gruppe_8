@@ -1,13 +1,15 @@
 package src.View;
 
-import src.Controller.InputOutputProcess;
+import src.Controller.*;
 
 import java.time.LocalDate;
 
 public class SubMenu {
     UserInputScanner userInputScanner = new UserInputScanner();
     InputOutputProcess ioProcess = new InputOutputProcess();
+
     int choice;
+    String customerName;
 
 
 }
@@ -16,8 +18,10 @@ class createBookingSubMenu extends SubMenu {
 
 
     public createBookingSubMenu() {
+        System.out.println("Create Booking");
+        System.out.println("--------------------");
         ioProcess.displayDateAvailableTimes(userInputScanner.getDateInput());
-        ioProcess.processBooking(userInputScanner.getNameInput(), userInputScanner.getDateInput());
+        ioProcess.createBooking(customerName);
         System.out.println("Booking successful!");
     }
 
@@ -53,16 +57,28 @@ class manageBookingSubMenu extends SubMenu {
                     System.out.println("Holiday "+ dateInput.toString() +" registered!");
                 }
 
-
                 break;
             case 2:
+                System.out.println("Cancel Booking");
+                System.out.println("--------------------");
                 ioProcess.cancelBooking();
+                System.out.println("Appointment successfully found.");
+                System.out.println("--------------------");
+                System.out.println("Appointment cancelled.");
                 break;
             case 3:
+                System.out.println("Change Booking");
+                System.out.println("--------------------");
                 ioProcess.changeBooking();
+                System.out.println("--------------------");
+                System.out.println("Booking successfully changed!");
                 break;
             case 4:
+                System.out.println("Pay Later");
+                System.out.println("--------------------");
                 ioProcess.payLater();
+                System.out.println("--------------------");
+                System.out.println("Payment successfully processed!");
                 break;
             default:
                 System.out.println("Invalid input");
