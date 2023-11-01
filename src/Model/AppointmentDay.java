@@ -49,9 +49,9 @@ public class AppointmentDay {
     public List<Integer> getAvailableTimes() {
         List<Integer> availableTimeSlots = new ArrayList<>();
         for (int i = 0; i < appointments.size(); i++) {
-            if (appointments.get(i) == null) {
+            if (!appointments.get(i).booked) {
                 availableTimeSlots.add(i);
-            } // if-statement
+            }
         } // for-loop
         return availableTimeSlots;
     }

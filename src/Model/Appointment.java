@@ -9,7 +9,7 @@ import java.awt.*;
 
 public class Appointment {
     private boolean paid = true;
-    private boolean booked = false;
+    public boolean booked = false;
     private String customerName;
 
     public void book(String name) {

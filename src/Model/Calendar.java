@@ -12,8 +12,7 @@ import java.util.ArrayList;
 */
 
 public class Calendar {
-    private final int MONTH_LENGTH = 31; // constant
-    public ArrayList<AppointmentDay> month = new ArrayList<AppointmentDay>(31);
+    public ArrayList<AppointmentDay> month ;
 
     //   private final int WEEK_LENGTH = 7; // constant
     //   protected ArrayList<AppointmentDay> currentWeek = new ArrayList<AppointmentDay>(7);
@@ -30,7 +29,15 @@ public class Calendar {
 
     // constructor:
     public Calendar() {
+        initializeMonth();
+    }
 
+    private void initializeMonth() {
+        int MONTH_LENGTH = 31;
+        this.month = new ArrayList<>(MONTH_LENGTH);
+        for (int i = 0; i < MONTH_LENGTH; i++) {
+            month.add(i, new AppointmentDay());
+        }
     }
 
     // methods:
@@ -39,9 +46,7 @@ public class Calendar {
     }
 
 
-    public void getDate(String name, int date) {
 
-    }
 
     public void showDay(int dateNr) {
         System.out.println("Day: ");
@@ -50,7 +55,7 @@ public class Calendar {
         for (int i = 0; i < 7; i++) {
             int date = dateNr + i;
             System.out.println(month.get(date).getAvailableTimes());
-            int[] availableTimes = {1,2,4,5};
+
 
         }
     }
