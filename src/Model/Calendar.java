@@ -19,6 +19,20 @@ public class Calendar {
     public ArrayList<AppointmentDay> month = new ArrayList<AppointmentDay>(31);
     protected ArrayList<AppointmentDay> currentWeek = new ArrayList<AppointmentDay>(7);
 
+    // constructor:
+    public Calendar() {
+        fillCurrentWeek();
+    }
+
+    // methods:
+    public AppointmentDay getDay (int dateNr) {
+        return month.get(dateNr);
+    }
+
+    public void setDayAsHoliday (int dateNr) {
+        month.get(dateNr).setWeekend(true);
+    }
+
     public void checkDate(String name, int date) {
 
     }
@@ -35,9 +49,7 @@ public class Calendar {
         }
     }
 
-    public Calendar() {
-        fillCurrentWeek();
-    }
+
 
     public void showCalendar(){
         System.out.printf("");

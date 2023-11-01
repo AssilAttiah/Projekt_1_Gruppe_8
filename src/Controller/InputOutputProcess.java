@@ -37,7 +37,9 @@ public class InputOutputProcess {
 
     public void displayAvailableTimes(LocalDate date) {
         calendar.showDay(io.getDateNr(date));
-    } //    Fetches and displays available times from the model.
+    }
+
+    //    Fetches and displays available times from the model.
 
     public void processBooking(String name, LocalDate date) {
         calendar.month.get(io.getDateNr(date));

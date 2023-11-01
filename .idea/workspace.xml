@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29374587-5606-4853-b2ea-b7df0e9b76f0" name="Changes" comment="delete Extension of classes" />
+    <list default="true" id="29374587-5606-4853-b2ea-b7df0e9b76f0" name="Changes" comment="method availableTimes -&gt; readDayAvailableTimes&#10;- for better naming (CRUD methods)">
+      <change beforePath="$PROJECT_DIR$/src/Controller/InputOutputProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InputOutputProcess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Calendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Calendar.java" afterDir="false" />
+    </list>
     <list id="345e37ba-7ac4-4a6a-ba98-d000035539fc" name="Changes by aliselimi" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +100,7 @@
       <workItem from="1698750359680" duration="627000" />
       <workItem from="1698754713272" duration="959000" />
       <workItem from="1698756300197" duration="3869000" />
-      <workItem from="1698837140528" duration="245000" />
+      <workItem from="1698837140528" duration="674000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -195,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698837357783</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="method availableTimes -&gt; readDayAvailableTimes&#10;- for better naming (CRUD methods)">
+      <option name="closed" value="true" />
+      <created>1698837686404</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1698837686404</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +221,8 @@
     <MESSAGE value="setup InputOutputProcess.class" />
     <MESSAGE value="adjust Credit methods in Appointment.java" />
     <MESSAGE value="delete Extension of classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete Extension of classes" />
+    <MESSAGE value="method availableTimes -&gt; readDayAvailableTimes&#10;- for better naming (CRUD methods)" />
+    <option name="LAST_COMMIT_MESSAGE" value="method availableTimes -&gt; readDayAvailableTimes&#10;- for better naming (CRUD methods)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

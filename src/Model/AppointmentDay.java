@@ -13,6 +13,7 @@ import java.util.List;
 public class AppointmentDay {
     private LocalDate date;
     private boolean weekend = false;
+    private boolean holiday = false;
     private ArrayList<Appointment> appointments;
     int dayNumber;
 
@@ -78,10 +79,13 @@ public class AppointmentDay {
     }
 
 
-    // 2. check methods:
+    // 2. boolean methods: for Weekend and Holiday
     private boolean isWeekend() {       // check if the day is weekend
         DayOfWeek day = date.getDayOfWeek();
         return day == DayOfWeek.SATURDAY || day == DayOfWeek.SUNDAY;
+    }
+    public boolean isHoliday() {        // check if the day is holiday
+        return holiday = true;
     }
 
     // 3. service methods:
