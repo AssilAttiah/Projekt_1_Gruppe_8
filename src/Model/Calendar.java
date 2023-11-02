@@ -1,5 +1,6 @@
 package src.Model;
 
+import java.time.DayOfWeek;
 import java.util.ArrayList;
 
 // function of Class: Calendar
@@ -56,8 +57,12 @@ public class Calendar {
 
         }
     }
-
-
+/*
+    private boolean isWeekend() {       // check if the day is weekend
+        DayOfWeek day = date.getDayOfWeek();
+        return day == DayOfWeek.SATURDAY || day == DayOfWeek.SUNDAY;
+    }
+*/
 
 
 /*

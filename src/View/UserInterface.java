@@ -9,15 +9,15 @@ package src.View;
 import src.Model.Calendar;
 
 public class UserInterface {
-    Menu menu;
+
 
     UserInterface() {
-        menu = new Menu();
+
     }
 
     public void startProgram(){
         System.out.println("Harry's Salon Electronic Booking System");
-
+        Menu menu = new Menu();
         menu.displayMenu();
     }
 

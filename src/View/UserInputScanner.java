@@ -33,8 +33,8 @@ public class UserInputScanner {
         System.out.println("--------------------");
         return customerName;
     }
-    public String getNameInput(String type) {
-        System.out.println("Enter "+type+": ");
+    public String getNameInput(String nameType) {
+        System.out.println("Enter "+nameType+": ");
         try {
             return scanner.next();
         } catch (Exception e) {

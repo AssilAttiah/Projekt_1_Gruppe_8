@@ -29,7 +29,7 @@ public class InputOutputProcess {
     UserInputScanner userInputScanner = new UserInputScanner();
 
     public InputOutputProcess () {
-        now = LocalDate.now();
+        this.now = LocalDate.now();
         
     }
 
@@ -73,7 +73,7 @@ public class InputOutputProcess {
     public void payLater(String customerName){
         io.findAppointmentWhileLoop();
         io.getAppointment(date, time).useCreditDelayPayment();
-        io.getAppointment(date, time).setCustomerName(customerName);
+
 
     }
 
@@ -98,7 +98,7 @@ public class InputOutputProcess {
         // Methods:
         // 1. appointment methods:
 
-        private void
+
 
         private void findAppointmentWhileLoop() {
             System.out.println("Lets find your appointment!");

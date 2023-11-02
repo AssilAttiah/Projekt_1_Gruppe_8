@@ -6,16 +6,13 @@ import src.Controller.InputOutputProcess;
 
 public class Menu {
     UserInputScanner userInputScanner;
-    InputOutputProcess ioProcess = new InputOutputProcess();
     UserInterface ui;
-
 
     String userName;
 
     public Menu() {
         this.userInputScanner = new UserInputScanner();
-
-        userName = userInputScanner.getNameInput(userName);
+        userName = userInputScanner.getNameInput("user name");
     }
 
     public void displayMenu() {

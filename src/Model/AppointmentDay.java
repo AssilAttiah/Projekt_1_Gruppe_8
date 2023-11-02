@@ -19,7 +19,6 @@ public class AppointmentDay {
 
     public AppointmentDay() {
 
-        this.weekend = isWeekend();
         this.appointments = new ArrayList<>(8);     // 8 hrs (appointments) in a day: 10-18.
     }
 
@@ -84,10 +83,10 @@ public class AppointmentDay {
     }
 
     // 2. boolean methods: for Weekend and Holiday
-    private boolean isWeekend() {       // check if the day is weekend
-        DayOfWeek day = date.getDayOfWeek();
-        return day == DayOfWeek.SATURDAY || day == DayOfWeek.SUNDAY;
+    public void setDayAsWeekend() {
+        weekend = true;
     }
+
 
 
     // 3. service methods:
