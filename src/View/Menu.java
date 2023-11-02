@@ -16,7 +16,10 @@ public class Menu {
     }
 
     public void displayMenu() {
+        System.out.println("Welcome " + userName + "!");
+        System.out.println("--------------------");
         while (true) {
+            System.out.println();
             System.out.println("1. Create Booking");
             System.out.println("2. Manage Booking");
             System.out.println("3. Access Financial Data");

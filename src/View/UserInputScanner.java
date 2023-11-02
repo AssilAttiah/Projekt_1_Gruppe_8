@@ -77,14 +77,15 @@ public class UserInputScanner {
     }
 
     private LocalDate nextDate() {
-        System.out.println("Enter date in format dd-mm-yyyy: ");
+        System.out.println("Enter date in format yyyy-mm-dd: ");
+        String dateInput = scanner.next();
         try {
-            return LocalDate.parse(scanner.next());
+            return LocalDate.parse(dateInput);
         } catch (Exception e) {
             System.out.println("Error: " + e);
         }
         return null;
     }
-    // Add more methods for different types of inputs
+
 }
 
