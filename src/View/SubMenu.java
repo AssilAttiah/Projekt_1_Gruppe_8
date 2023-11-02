@@ -68,7 +68,7 @@ class manageBookingSubMenu extends SubMenu {
             case 2:
                 System.out.println("Cancel Booking");
                 System.out.println("--------------------");
-                ioProcess.cancelBooking();
+                ioProcess.cancelBooking(customerName);
                 System.out.println("Appointment successfully found.");
                 System.out.println("--------------------");
                 System.out.println("Appointment cancelled.");
@@ -76,14 +76,14 @@ class manageBookingSubMenu extends SubMenu {
             case 3:
                 System.out.println("Change Booking");
                 System.out.println("--------------------");
-                ioProcess.changeBooking();
+                ioProcess.changeBooking(customerName);
                 System.out.println("--------------------");
                 System.out.println("Booking successfully changed!");
                 break;
             case 4:
                 System.out.println("Pay Later");
                 System.out.println("--------------------");
-                ioProcess.payLater();
+                ioProcess.payLater(customerName);
                 System.out.println("--------------------");
                 System.out.println("Payment successfully processed!");
                 break;

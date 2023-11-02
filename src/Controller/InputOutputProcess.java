@@ -45,42 +45,37 @@ public class InputOutputProcess {
         calendar.getDay(dateNr).setDayAsHoliday();
     }
 
-    public void cancelBooking() {
+    public void cancelBooking(String customerName) {
 
         io.getDateTime();
 
         boolean isCancelled = false;
 
         while (!isCancelled) {
-
-            if (io.findAppointment(date, time).booked) {
-                io.findAppointment(date, time).cancel();
+            // if-loop to 1) check if the appointment is booked and 2) check if the customerName matches the appointment:
+            if (io.getAppointment(date, time).booked && io.getAppointment(date, time).customerName.equals(customerName)) {
+                io.getAppointment(date, time).cancel();
                 isCancelled = true;
             } else {
                 System.out.println("Appointment not found.");
                 System.out.println("--------------------");
                 io.getDateTime();
             }
-
         }
-
     }
 
-    public void changeBooking(){
-
+    public void changeBooking(String customerName) {
         io.findAppointmentWhileLoop();
-
-        io.findAppointment(date, time).cancel();
-
-
-
-    }
-    
-    public void payLater(){
-
-
+        cancelBooking(customerName);
+        io.newAppointment();
     }
 
+    public void payLater(String customerName){
+        io.findAppointmentWhileLoop();
+        io.getAppointment(date, time).useCreditDelayPayment();
+        io.getAppointment(date, time).setCustomerName(customerName);
+
+    }
 
     /*
     processBooking():           Handles the booking process by coordinating between the user input and the model.
@@ -90,7 +85,6 @@ public class InputOutputProcess {
     initiatePayment():          Handles the payment process.
     */
 
-
     // 2. additional Methods
     public void displayDateAvailableTimes(LocalDate date) {
         calendar.showDayAvailableTimes(io.getDateNr(date));
@@ -98,25 +92,23 @@ public class InputOutputProcess {
 
 
 
-
-
-
-
-
     // inner Class IOProcessing for InputOutputProcess:
+    // methods: appointment methods, process methods, date methods, display methods
     private class IOProcessing {
+        // Methods:
+        // 1. appointment methods:
+
+        private void
 
         private void findAppointmentWhileLoop() {
             System.out.println("Lets find your appointment!");
             getDateTime();
-
             isFound = false;
-
             while (!isFound) {
-
-                if (io.findAppointment(date, time).booked) {
+                if (io.getAppointment(date, time).booked) {
 
                     isFound = true;
+                    System.out.println("Appointment found!");
                 } else {
                     System.out.println("Appointment not found.");
                     System.out.println("--------------------");
@@ -125,20 +117,34 @@ public class InputOutputProcess {
             }
         }
 
+        private Appointment getAppointment(LocalDate date, int time) {
+            return calendar.getDay(getDateNr(date)).getAppointment(time);
+        }
+
+        private void newAppointment () {
+            getNewDateTime();
+
+        }
+
+
+
+        // 2. process methods:
+        public void processBooking(String customerName, LocalDate date, int time) {
+            calendar.month.get(getDateNr(date)).getAppointment(time).book(customerName);
+        }
+
+        // 3. date methods:
         private void getDateTime() {
             System.out.println("Enter date: ");
             date = userInputScanner.getDateInput();
             System.out.println("Enter time: ");
             time = userInputScanner.getIntInput();
         }
-
-        private Appointment findAppointment (LocalDate date, int time) {
-            return calendar.getDay(getDateNr(date)).getAppointment(time);
-        }
-
-
-        public void processBooking(String customerName, LocalDate date, int time) {
-            calendar.month.get(getDateNr(date)).getAppointment(time).book(customerName);
+        private void getNewDateTime() {
+            System.out.println("Enter new date: ");
+            newDate = userInputScanner.getDateInput();
+            System.out.println("Enter new time: ");
+            newTime = userInputScanner.getIntInput();
         }
 
         private int getDateNr(LocalDate date) {
@@ -149,6 +155,7 @@ public class InputOutputProcess {
             return now.compareTo(date);
         }
 
+        // 4. display methods:
         public void showDayAndDaysFollowing(LocalDate date) {
 
             for (int i = 0; i < 7; i++) {

@@ -17,14 +17,6 @@ public class AppointmentDay {
     private ArrayList<Appointment> appointments;
 
 
-    // constructor:
-    /*
-        1. sets the date
-        2. checks if the date is weekend
-        3. creates an arraylist of appointments for the day
-    */
-
-
     public AppointmentDay() {
 
         this.weekend = isWeekend();

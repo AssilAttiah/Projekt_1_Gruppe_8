@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29374587-5606-4853-b2ea-b7df0e9b76f0" name="Changes" comment="fixing StackOverFlowException">
-      <change afterPath="$PROJECT_DIR$/src/Controller/controllerPackDiagram.uml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/modelPackDiagram.uml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/viewPackDiagram.uml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/InputOutputProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InputOutputProcess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Appointment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/AppointmentDay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/AppointmentDay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/SubMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SubMenu.java" afterDir="false" />
     </list>
     <list id="345e37ba-7ac4-4a6a-ba98-d000035539fc" name="Changes by aliselimi" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,26 +45,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/User/OneDrive/. Universitet/. Github/Projekt_1_Gruppe_8/src/View",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/OneDrive/. Universitet/. Github/Projekt_1_Gruppe_8/src/View&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\OneDrive\. Universitet\. Github\Projekt_1_Gruppe_8\src\View" />
@@ -139,6 +140,7 @@
       <workItem from="1698756300197" duration="3869000" />
       <workItem from="1698837140528" duration="8801000" />
       <workItem from="1698848959425" duration="4455000" />
+      <workItem from="1698919043026" duration="1420000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />

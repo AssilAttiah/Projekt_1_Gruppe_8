@@ -10,7 +10,7 @@ import java.awt.*;
 public class Appointment {
     private boolean paid = true;
     public boolean booked = false;
-    private String customerName;
+    public String customerName;
 
     public void book(String name) {
         customerName = name;
@@ -46,6 +46,10 @@ public class Appointment {
         } else {
             System.out.println("Time Not Available");
         }
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 
     public String toString () {
