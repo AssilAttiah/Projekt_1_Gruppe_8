@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29374587-5606-4853-b2ea-b7df0e9b76f0" name="Changes" comment="cleaning InputOutputProcess">
+    <list default="true" id="29374587-5606-4853-b2ea-b7df0e9b76f0" name="Changes" comment="fixing StackOverFlowException">
+      <change afterPath="$PROJECT_DIR$/src/Controller/controllerPackDiagram.uml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/modelPackDiagram.uml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/viewPackDiagram.uml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/InputOutputProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InputOutputProcess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/AppointmentDay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/AppointmentDay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Calendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Calendar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/SubMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SubMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/UserInputScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/UserInputScanner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/UserInterface.java" afterDir="false" />
     </list>
     <list id="345e37ba-7ac4-4a6a-ba98-d000035539fc" name="Changes by aliselimi" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,27 +44,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/aleke/OneDrive/. Universitet/. Github/HarrysSalon&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/User/OneDrive/. Universitet/. Github/Projekt_1_Gruppe_8/src/View",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\OneDrive\. Universitet\. Github\Projekt_1_Gruppe_8\src\View" />
+      <recent name="C:\Users\User\OneDrive\. Universitet\. Github\Projekt_1_Gruppe_8\src\Controller" />
       <recent name="C:\Users\aleke\OneDrive\. Universitet\. Github\HarrysSalon" />
     </key>
   </component>
@@ -140,7 +138,7 @@
       <workItem from="1698754713272" duration="959000" />
       <workItem from="1698756300197" duration="3869000" />
       <workItem from="1698837140528" duration="8801000" />
-      <workItem from="1698848959425" duration="3618000" />
+      <workItem from="1698848959425" duration="4455000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -350,13 +348,30 @@
       <option name="project" value="LOCAL" />
       <updated>1698850872578</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="fixing StackOverFlowException">
+      <option name="closed" value="true" />
+      <created>1698852666647</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1698852666647</updated>
+    </task>
+    <task id="LOCAL-00028" summary="fixing StackOverFlowException">
+      <option name="closed" value="true" />
+      <created>1698853339408</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1698853339408</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="View and Controller classes" />
     <MESSAGE value="Menu and UserInputScanner.java" />
     <MESSAGE value="1" />
@@ -378,7 +393,8 @@
     <MESSAGE value="Menu, SubMenu and Scanner Errorhandling" />
     <MESSAGE value="merge" />
     <MESSAGE value="cleaning InputOutputProcess" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaning InputOutputProcess" />
+    <MESSAGE value="fixing StackOverFlowException" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing StackOverFlowException" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

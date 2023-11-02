@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="-70.5" y="-12.5">src.Model.Appointment</node>
+    <node x="-79.0" y="314.5">src.Model.AppointmentDay</node>
+    <node x="-79.0" y="863.5">src.Model.Calendar</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="src.Model.Calendar" target="src.Model.AppointmentDay" relationship="TO_MANY">
+      <point x="-60.0" y="-56.5" />
+      <point x="-60.0" y="225.5" />
+    </edge>
+    <edge source="src.Model.Calendar" target="src.Model.AppointmentDay" relationship="CREATE">
+      <point x="60.0" y="-56.5" />
+      <point x="60.0" y="225.5" />
+    </edge>
+    <edge source="src.Model.AppointmentDay" target="src.Model.Appointment" relationship="TO_MANY">
+      <point x="0.0" y="-225.5" />
+      <point x="0.0" y="112.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.9287128712871288" showDependencies="true" x="43.0" y="492.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
