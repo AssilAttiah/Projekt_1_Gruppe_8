@@ -7,12 +7,13 @@ import src.Controller.InputOutputProcess;
 public class Menu {
     UserInputScanner userInputScanner;
     UserInterface ui;
-
+    int choice;
     String userName;
 
     public Menu() {
         this.userInputScanner = new UserInputScanner();
         userName = userInputScanner.getNameInput("user name");
+
     }
 
     public void displayMenu() {
@@ -26,7 +27,7 @@ public class Menu {
             System.out.println("4. Add Additional Items To Card And Pay");
             System.out.println("5. Exit");
             int choice = userInputScanner.getIntInput();
-            if (choice == 1) {
+        /*    if (choice == 1) {
                 createBookingSubMenu createBookingSubMenu = new createBookingSubMenu();
             } else if (choice == 2) {
                 manageBookingSubMenu manageBookingSubMenu = new manageBookingSubMenu();
@@ -42,7 +43,36 @@ public class Menu {
             }
             System.out.println("--------------------");
         }
+        */
+            switch (choice) {
+                case 1:
+                    createBookingSubMenu createBooking = new createBookingSubMenu();
+                    break;
+                case 2:
+                    manageBookingSubMenu manageBooking = new manageBookingSubMenu();
+                    break;
+                case 3:
+                    accessFinancialDataSubMenu accessFinancialData = new accessFinancialDataSubMenu();
+                    break;
+                case 4:
+                    addAdditionalItemsToCardAndPaySubMenu addAdditionalItems = new addAdditionalItemsToCardAndPaySubMenu();
+                    break;
+                case 5:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Invalid Input, Try Again");
+            }
+        }
     }
+}
+
+class testMenu {
+    public static void main(String[] args) {
+        Menu menu = new Menu();
+        menu.displayMenu();
+    }
+}
 
 
 
@@ -86,6 +116,6 @@ public class Menu {
   */
 
 
-}
+
 
 

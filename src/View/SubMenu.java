@@ -22,9 +22,13 @@ class createBookingSubMenu extends SubMenu {
         System.out.println("Create Booking");
         System.out.println("--------------------");
         customerName = userInputScanner.getCustomerName();
-        ioProcess.displayDateAvailableTimes(userInputScanner.getDateInput());
+        LocalDate date = userInputScanner.getDateInput();
+        ioProcess.showCalGrid(date);
+        ioProcess.createCalGridBooking();
 
+        ioProcess.showCalGrid(date);
         System.out.println("Booking successful!");
+
     }
 
 }

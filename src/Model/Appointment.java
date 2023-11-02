@@ -52,7 +52,16 @@ public class Appointment {
         this.customerName = customerName;
     }
 
+    @Override
     public String toString () {
-        return "Appointment: " + customerName + " " + booked + " " + booked + " " + paid;
+        if (!booked) {
+            return "No Appointment";
+        } else {
+            String customerName = this.customerName == null ? "No Customer name" : this.customerName;
+            String booked = "Booked";
+            String paid = this.paid ? "Paid" : "Not Paid";
+
+            return customerName + ", " + booked + ", " + paid;
+        }
     }
 }
