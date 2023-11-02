@@ -63,7 +63,6 @@ class manageBookingSubMenu extends SubMenu {
                     ioProcess.registerHoliday(dateInput);
                     System.out.println("Holiday "+ dateInput.toString() +" registered!");
                 }
-
                 break;
             case 2:
                 System.out.println("Cancel Booking");

@@ -72,7 +72,6 @@ public class UserInputScanner {
     }
 
     public LocalDate getDateInput(){
-
         return nextDate();
     }
 
