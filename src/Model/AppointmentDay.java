@@ -17,10 +17,11 @@ public class AppointmentDay {
     private ArrayList<Appointment> appointments;
 
 
-    public AppointmentDay() {
+    public AppointmentDay(LocalDate date, boolean weekend) {
 
         this.appointments = new ArrayList<>(8);     // 8 hrs (appointments) in a day: 10-18.
     }
+
 
     // methods:
 
@@ -78,11 +79,12 @@ public class AppointmentDay {
     }
 
     // setters:
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
     public void setDayAsHoliday() {
         holiday = true;
     }
-
-    // 2. boolean methods: for Weekend and Holiday
     public void setDayAsWeekend() {
         weekend = true;
     }

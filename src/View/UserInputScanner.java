@@ -28,7 +28,6 @@ public class UserInputScanner {
     }
 
     public String getCustomerName() {
-        System.out.println("Enter customer name: ");
         String customerName = getNameInput("customer name");
         System.out.println("--------------------");
         return customerName;
