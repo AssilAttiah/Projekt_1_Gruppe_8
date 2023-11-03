@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29374587-5606-4853-b2ea-b7df0e9b76f0" name="Changes" comment="Fixed update of Appointment status after Booking made">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HarrysSalon/src/Controller/Processor$IOProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HarrysSalon/src/Controller/Processor$IOProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HarrysSalon/src/Controller/Processor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HarrysSalon/src/Controller/Processor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HarrysSalon/src/View/UserInterface$CalGrid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HarrysSalon/src/View/UserInterface$CalGrid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Processor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Calendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Calendar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/UserInterface.java" afterDir="false" />
+    <list default="true" id="29374587-5606-4853-b2ea-b7df0e9b76f0" name="Changes" comment="improve welcome message">
+      <change beforePath="$PROJECT_DIR$/out/production/HarrysSalon/src/View/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HarrysSalon/src/View/UserInterface.class" afterDir="false" />
     </list>
     <list id="345e37ba-7ac4-4a6a-ba98-d000035539fc" name="Changes by aliselimi" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +113,7 @@
       <workItem from="1698919043026" duration="1748000" />
       <workItem from="1698968516729" duration="592000" />
       <workItem from="1699002942210" duration="17538000" />
-      <workItem from="1699021719021" duration="8442000" />
+      <workItem from="1699021719021" duration="8736000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -362,7 +355,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699027718317</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="improve setDaysArray in CalGrid class, to ensure firstDay variable isn't modified">
+      <option name="closed" value="true" />
+      <created>1699030290812</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1699030290812</updated>
+    </task>
+    <task id="LOCAL-00032" summary="improve welcome message">
+      <option name="closed" value="true" />
+      <created>1699030540919</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1699030540919</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +379,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="View and Controller classes" />
     <MESSAGE value="Menu and UserInputScanner.java" />
     <MESSAGE value="1" />
     <MESSAGE value="dunno" />
@@ -394,7 +402,9 @@
     <MESSAGE value="fixing StackOverFlowException" />
     <MESSAGE value="bulk push - work" />
     <MESSAGE value="Fixed update of Appointment status after Booking made" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed update of Appointment status after Booking made" />
+    <MESSAGE value="improve setDaysArray in CalGrid class, to ensure firstDay variable isn't modified" />
+    <MESSAGE value="improve welcome message" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve welcome message" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -403,39 +413,6 @@
           <properties class="java.lang.StackOverflowError" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/View/Main.java</url>
-          <line>3</line>
-          <properties class="src.View.Main" method="main">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/View/Main.java</url>
-          <line>6</line>
-          <properties class="src.View.Main" method="run">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/View/Main.java</url>
-          <line>4</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/View/Main.java</url>
-          <line>5</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/View/Main.java</url>
-          <line>7</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
