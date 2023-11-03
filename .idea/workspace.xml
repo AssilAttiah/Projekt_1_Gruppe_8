@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29374587-5606-4853-b2ea-b7df0e9b76f0" name="Changes" comment="bulk push - work" />
+    <list default="true" id="29374587-5606-4853-b2ea-b7df0e9b76f0" name="Changes" comment="bulk push - work">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Processor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/UserInterface.java" afterDir="false" />
+    </list>
     <list id="345e37ba-7ac4-4a6a-ba98-d000035539fc" name="Changes by aliselimi" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +143,7 @@
       <workItem from="1698919043026" duration="1748000" />
       <workItem from="1698968516729" duration="592000" />
       <workItem from="1699002942210" duration="17538000" />
-      <workItem from="1699021719021" duration="4704000" />
+      <workItem from="1699021719021" duration="5619000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />

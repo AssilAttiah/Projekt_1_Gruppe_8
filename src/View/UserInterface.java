@@ -8,6 +8,8 @@ import src.Model.Calendar;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+import static src.Controller.Processor.calendar;
+
 public class UserInterface {
 
     public void startProgram(){
@@ -151,6 +153,17 @@ public class UserInterface {
                     System.out.println("Error: Invalid time input");
             }
             return 0;
+        }
+
+        public void updateAppointmentStatus(LocalDate date, int timeSlot, boolean isBooked) {
+            // Find the AppointmentDay object for the given date
+            AppointmentDay day = calendar.getDate(date);
+            if (day != null) {
+                // Update the appointment status
+                day.getAppointmentArrNr(timeSlot).booked = isBooked;
+            }
+            // Make sure to call updateCalGrid() after this to refresh the grid
+            updateCalGrid();
         }
     }
 

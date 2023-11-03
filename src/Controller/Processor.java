@@ -54,6 +54,7 @@ public class Processor {
 
             if (calendar.isAvailable(dateInput, timeInput)) {
                 io.processBooking(customerName, dateInput, timeInput);
+                calGrid.updateAppointmentStatus(dateInput, timeInput, true);
                 ui.showBookingConfirmation(customerName, dateInput, times[timeInput]);
                 bookingCreated = true;
             } else {
@@ -61,6 +62,7 @@ public class Processor {
             }
         }
     }
+
 
     public void registerHoliday(LocalDate date) {
         calendar.getDate(date).setDayAsHoliday();

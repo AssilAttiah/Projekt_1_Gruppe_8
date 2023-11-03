@@ -36,9 +36,9 @@ class manageBookingSubMenu extends SubMenu {
 
         // options:
         System.out.println("1. Register Holidays");
-        System.out.println("2. Cancel Booking");
-        System.out.println("3. Change Booking");
-        System.out.println("4. Pay Later");
+        System.out.println("2. Cancel Booking -- currently unavailable");
+        System.out.println("3. Change Booking -- currently unavailable");
+        System.out.println("4. Pay Later -- currently unavailable");
         System.out.println("--------------------");
         // choice:
         System.out.println("Enter choice: ");
