@@ -54,7 +54,8 @@ public class Processor {
 
             if (calendar.isAvailable(dateInput, timeInput)) {
                 io.processBooking(customerName, dateInput, timeInput);
-                calGrid.updateAppointmentStatus(dateInput, timeInput, true);
+                calGrid.updateAppointmentStatus(dateInput, timeInput, true); // updates with new status of appointments
+                calGrid.updateCalGrid(); // refreshes the calGrid with the new state of Appointments in the CalGrid
                 ui.showBookingConfirmation(customerName, dateInput, times[timeInput]);
                 bookingCreated = true;
             } else {

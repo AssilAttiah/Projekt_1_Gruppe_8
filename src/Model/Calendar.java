@@ -40,9 +40,6 @@ public class Calendar {
     }
 
     // methods:
-
-
-
     // check method
     private boolean checkWeekend(LocalDate today) {
         DayOfWeek dayOfWeek = today.getDayOfWeek();
@@ -88,53 +85,3 @@ public class Calendar {
         return true;
     }
 }
-
-class TestCalendar {
-    public static void main(String[] args) {
-        Calendar calendar = new Calendar();
-
-        calendar.displayWeek(LocalDate.now());
-        calendar.displayDay(LocalDate.now());
-    }
-}
-
-
-
-
-
-
-    //   private final int WEEK_LENGTH = 7; // constant
-    //   protected ArrayList<AppointmentDay> currentWeek = new ArrayList<AppointmentDay>(7);
-    // fillCurrentWeek();
-     /*   private void fillCurrentWeek () {
-
-        for (int i = 0; i < WEEK_LENGTH; i++) {
-
-            currentWeek.add(month.get(i));
-        }
-    }
-
-  */
-
-/*
-    private boolean isWeekend() {       // check if the day is weekend
-        DayOfWeek day = date.getDayOfWeek();
-        return day == DayOfWeek.SATURDAY || day == DayOfWeek.SUNDAY;
-    }
-*/
-
-
-/*
-        // methods:
-        getWeek(int weekNumber)
-        getMonth(int monthNumber)
-        getDay(LocalDate date)
-
-        updateAppointmentDay(AppointmentDay day)
-        listAppointmentDays()
-        isWeekend(LocalDate date)
-        isHoliday(LocalDate date)
-        isAvailable(LocalDate date, LocalTime time)
- */
-
-

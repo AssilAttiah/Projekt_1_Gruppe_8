@@ -29,20 +29,18 @@ public class UserInterface {
     public static class CalGrid {
         // instance variables
         private LocalDate firstDay;
-
-        char[][] grid = new char[8][6];
-
         public static String[] times = {"10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"};
         public static String[] days = new String[5];
+        char[][] grid = new char[8][6];
 
+        // objects for integration with Controller
         ArrayList<AppointmentDay> daysObjects = new ArrayList<>(5);
-
         Processor ioProcess;
 
         // constructor
         public CalGrid(ArrayList<AppointmentDay> daysObjects, LocalDate firstDay, Processor ioProcess) {
-            this.ioProcess = ioProcess;
             this.daysObjects = daysObjects;
+            this.ioProcess = ioProcess;
             initializeGrid();
             setDaysArray(firstDay);
             updateCalGrid();
@@ -57,45 +55,17 @@ public class UserInterface {
             }
         }
 
+        // methods:
+        // calGrid methods:
         public void setDaysArray(LocalDate firstDay) {
             this.firstDay = firstDay;
             String[] weekDays = {"MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"};
+            LocalDate currentDay = firstDay; // Use a separate variable to iterate through the days
             for (int i = 0; i < 5; i++) {
-                days[i] = weekDays[firstDay.getDayOfWeek().getValue() - 1];
-                firstDay = firstDay.plusDays(1);
+                days[i] = weekDays[currentDay.getDayOfWeek().getValue() - 1];
+                currentDay = currentDay.plusDays(1); // Increment the day for the next iteration
             }
         }
-
-        public void updateCalGrid () {
-
-            this.daysObjects = ioProcess.getCalDays(firstDay, 5);
-            setDaysArray(firstDay);
-
-            for (int i = 0; i < daysObjects.size(); i++) {
-                for (int x = 0; x < 8; x++) {
-                    // if appointment is booked or cancelled, set time to X or C
-                    if (daysObjects.get(i).getAppointmentArrNr(x).booked) {
-                        grid[x][i] = 'X';
-                    } else if (daysObjects.get(i).getAppointmentArrNr(x).cancelled) {
-                        grid[x][i] = 'C';
-                    } else {
-                        grid[x][i] = '_'; // -> available
-                    }
-                }
-                // if day = weekend or holiday, set all times to W or H
-                if (daysObjects.get(i).getIsWeekend()) {
-                    for (int x = 0; x < 8; x++) {
-                        grid[x][i] = 'W';
-                    }
-                } else if (daysObjects.get(i).getIsHoliday()) {
-                    for (int x = 0; x < 8; x++) {
-                        grid[x][i] = 'H';
-                    }
-                }
-            }
-        }
-
-        // main method to display calGrid
         public void showCalGrid() {
             // updates to show latest grid
             updateCalGrid();
@@ -113,8 +83,51 @@ public class UserInterface {
 
             System.out.println("  |-----|-----|-----|-----|-----|-----| ");
         }
+        // update calGrid methods:
+        public void updateCalGrid() {
+            this.daysObjects = ioProcess.getCalDays(firstDay, 5);
+            setDaysArray(firstDay);
+
+            for (int i = 0; i < daysObjects.size(); i++) {
+                // Check if the day is a weekend
+                if (daysObjects.get(i).getIsWeekend()) {
+                    for (int x = 0; x < 8; x++) {
+                        grid[x][i] = 'W';
+                    }
+                    // Check if the day is a holiday
+                } else if (daysObjects.get(i).getIsHoliday()) {
+                    for (int x = 0; x < 8; x++) {
+                        grid[x][i] = 'H';
+                    }
+                } else {
+                    for (int x = 0; x < 8; x++) {
+                        // Check if the appointment is booked or cancelled
+                        if (daysObjects.get(i).getAppointmentArrNr(x).booked) {
+                            grid[x][i] = 'X';
+                        } else if (daysObjects.get(i).getAppointmentArrNr(x).cancelled) {
+                            grid[x][i] = 'C';
+                        } else {
+                            grid[x][i] = '_'; // -> available
+                        }
+                    }
+                }
+            }
 
 
+
+        }
+        public void updateAppointmentStatus(LocalDate date, int timeSlot, boolean isBooked) {
+            // Find the AppointmentDay object for the given date
+            AppointmentDay day = calendar.getDate(date);
+            if (day != null) {
+                // Update the appointment status
+                day.getAppointmentArrNr(timeSlot).booked = isBooked;
+            }
+            // Make sure to call updateCalGrid() after this to refresh the grid
+            updateCalGrid();
+        }
+
+        // get methods:
         public LocalDate getDate(String dayInput) {
             // find date by checking dayInput against days array
             // return date
@@ -128,7 +141,6 @@ public class UserInterface {
             }
             return null;
         }
-
         public int getTime(int inputTime) {
             // find time by checking inputTime against times array
             // return time
@@ -155,18 +167,7 @@ public class UserInterface {
             return 0;
         }
 
-        public void updateAppointmentStatus(LocalDate date, int timeSlot, boolean isBooked) {
-            // Find the AppointmentDay object for the given date
-            AppointmentDay day = calendar.getDate(date);
-            if (day != null) {
-                // Update the appointment status
-                day.getAppointmentArrNr(timeSlot).booked = isBooked;
-            }
-            // Make sure to call updateCalGrid() after this to refresh the grid
-            updateCalGrid();
-        }
     }
-
 }
 
 
