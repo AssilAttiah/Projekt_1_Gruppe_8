@@ -3,31 +3,35 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="-70.5" y="-12.5">src.Model.Appointment</node>
-    <node x="-79.0" y="314.5">src.Model.AppointmentDay</node>
-    <node x="-79.0" y="863.5">src.Model.Calendar</node>
+    <node x="-50.0" y="-13.0">src.Model.Appointment</node>
+    <node x="-63.5" y="433.0">src.Model.AppointmentDay</node>
+    <node x="-79.0" y="1187.0">src.Model.Calendar</node>
   </nodes>
   <notes />
   <edges>
     <edge source="src.Model.Calendar" target="src.Model.AppointmentDay" relationship="TO_MANY">
-      <point x="-60.0" y="-56.5" />
-      <point x="-60.0" y="225.5" />
+      <point x="-100.0" y="-174.0" />
+      <point x="-80.0" y="328.0" />
     </edge>
     <edge source="src.Model.Calendar" target="src.Model.AppointmentDay" relationship="CREATE">
-      <point x="60.0" y="-56.5" />
-      <point x="60.0" y="225.5" />
+      <point x="60.0" y="-174.0" />
+      <point x="80.0" y="328.0" />
     </edge>
     <edge source="src.Model.AppointmentDay" target="src.Model.Appointment" relationship="TO_MANY">
-      <point x="0.0" y="-225.5" />
-      <point x="0.0" y="112.5" />
+      <point x="40.0" y="-328.0" />
+      <point x="60.0" y="174.0" />
+    </edge>
+    <edge source="src.Model.AppointmentDay" target="src.Model.Appointment" relationship="CREATE">
+      <point x="-80.0" y="-328.0" />
+      <point x="-60.0" y="174.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Compact" zoom="0.9287128712871288" showDependencies="true" x="43.0" y="492.0" />
+  <settings layout="Hierarchic Compact" zoom="0.46811224489795916" showDependencies="true" x="121.0" y="771.0" />
   <SelectedNodes />
   <Categories>
     <Category>Fields</Category>
+    <Category>Inner Classes</Category>
     <Category>Methods</Category>
-    <Category>Properties</Category>
   </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>

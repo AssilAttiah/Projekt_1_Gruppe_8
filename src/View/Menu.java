@@ -1,9 +1,6 @@
 package src.View;
 
 
-import src.Controller.InputOutputProcess;
-
-
 public class Menu {
     UserInputScanner userInputScanner;
     UserInterface ui;
@@ -20,30 +17,17 @@ public class Menu {
         System.out.println("\nWelcome " + userName + "!");
         System.out.println("--------------------");
         while (true) {
-            System.out.println("Please choose an option:");
+            System.out.println("\nPlease choose an option:");
             System.out.println("1. Create Booking");
             System.out.println("2. Manage Booking");
-            System.out.println("3. Access Financial Data");
-            System.out.println("4. Add Additional Items To Card And Pay");
+            System.out.println("3. Access Financial Data -- Feature not available yet");
+            System.out.println("4. Add Additional Items To Card And Pay -- Feature not available yet");
             System.out.println("5. Exit");
+            System.out.print("Choice: ");
             int choice = userInputScanner.getIntInput();
-        /*    if (choice == 1) {
-                createBookingSubMenu createBookingSubMenu = new createBookingSubMenu();
-            } else if (choice == 2) {
-                manageBookingSubMenu manageBookingSubMenu = new manageBookingSubMenu();
-            } else if (choice == 3) {
-                accessFinancialDataSubMenu accessFinancialDataSubMenu = new accessFinancialDataSubMenu();
-            } else if (choice == 4) {
-                addAdditionalItemsToCardAndPaySubMenu addAdditionalItemsToCardAndPaySubMenu = new addAdditionalItemsToCardAndPaySubMenu();
-            } else if (choice == 5) {
-                System.out.println("Exiting...");
-                break;
-            } else {
-                System.out.println("Invalid input");
-            }
-            System.out.println("--------------------");
-        }
-        */
+            System.out.println("--------------------\n");
+
+
             switch (choice) {
                 case 1:
                     createBookingSubMenu createBooking = new createBookingSubMenu();
@@ -59,7 +43,7 @@ public class Menu {
                     break;
                 case 5:
                     System.out.println("Exiting...");
-                    break;
+                    System.exit(0);
                 default:
                     System.out.println("Invalid Input, Try Again");
             }

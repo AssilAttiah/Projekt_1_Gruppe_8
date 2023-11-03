@@ -7,7 +7,7 @@
   </nodes>
   <notes />
   <edges />
-  <settings layout="Hierarchic Compact" zoom="1.5" showDependencies="false" x="36.0" y="180.0" />
+  <settings layout="Hierarchic Compact" zoom="1.0" showDependencies="false" x="45.5" y="217.5" />
   <SelectedNodes>
     <node>src.Controller.InputOutputProcess</node>
   </SelectedNodes>

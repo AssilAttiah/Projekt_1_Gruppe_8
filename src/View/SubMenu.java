@@ -6,44 +6,34 @@ import java.time.LocalDate;
 
 public class SubMenu {
     UserInputScanner userInputScanner = new UserInputScanner();
-
-    InputOutputProcess ioProcess = new InputOutputProcess();
-
+    Processor ioProcess = new Processor();
     int choice;
     String customerName;
-
-
 }
 
 class createBookingSubMenu extends SubMenu {
-
 
     public createBookingSubMenu() {
         System.out.println("Create Booking");
         System.out.println("--------------------");
         customerName = userInputScanner.getCustomerName();
         LocalDate date = userInputScanner.getDateInput();
+        System.out.println();
+        ioProcess.showCalGridInfo();
         ioProcess.showCalGrid(date);
-        ioProcess.createCalGridBooking();
-
+        ioProcess.createCalGridBooking(date, customerName);
         ioProcess.showCalGrid(date);
-        System.out.println("Booking successful!");
 
+        System.out.println("\nBooking successful!");
     }
-
 }
 
 class manageBookingSubMenu extends SubMenu {
-    // registerHolidays
-    // cancelBooking
-    // changeBooking
-    // payLater     -  for creditPayment
 
     public manageBookingSubMenu () {
         System.out.println("Manage Booking");
         System.out.println("--------------------");
-        // customerName:
-        customerName = userInputScanner.getCustomerName();
+
         // options:
         System.out.println("1. Register Holidays");
         System.out.println("2. Cancel Booking");
@@ -53,6 +43,11 @@ class manageBookingSubMenu extends SubMenu {
         // choice:
         System.out.println("Enter choice: ");
         choice = userInputScanner.getIntInput();
+        // customerName:
+        if (choice != 1) {
+            customerName = userInputScanner.getCustomerName();
+        }
+        System.out.println();
 
         // menu:
         switch (choice) {
@@ -95,6 +90,7 @@ class manageBookingSubMenu extends SubMenu {
         }
     }
 }
+
 
 class accessFinancialDataSubMenu extends SubMenu {
 

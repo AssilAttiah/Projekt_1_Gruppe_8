@@ -4,21 +4,31 @@ import java.awt.*;
 
 // function of Class: Appointment
 /*
-    Manages individual appointments, with methods to book and cancel.
+    Manages individual appointments, with methods:
+    - book
+    - cancel
+    - useCreditDelayPayment
+    - payCredit
+    - setCustomerName
 */
 
 public class Appointment {
-    private boolean paid = true;
+    public boolean holiday;
     public boolean booked = false;
+    public boolean weekend;
+    public boolean cancelled = false;
+
+    private boolean paid = true;
     public String customerName;
 
+    // methods:
     public void book(String name) {
         customerName = name;
         booked = true;
     }
-
     public void cancel() {
         booked = false;
+        cancelled = true;
     }
 
     public void useCreditDelayPayment() {
@@ -28,28 +38,14 @@ public class Appointment {
         paid = true;
     }
 
-
-    public void checkDate() {
-        if (!booked) {
-            System.out.println("Date Approved\n");
-        } else {
-            System.out.println("Date Not Available");
-        }
-    }
-
-    public void checkTime(){
-        if (!booked){
-            System.out.println("Time Approved");
-            System.out.println("...");
-            System.out.println("Appointment Booked Into Calendar");
-            System.out.println();
-        } else {
-            System.out.println("Time Not Available");
-        }
-    }
-
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
+    }
+    public void setHoliday(boolean holiday) {
+        this.holiday = holiday;
+    }
+    public void setWeekend(boolean weekend) {
+        this.weekend = weekend;
     }
 
     @Override

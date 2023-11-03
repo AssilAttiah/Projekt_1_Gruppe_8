@@ -38,18 +38,15 @@ public class Calendar {
             month.add(i, day);
         }
     }
+
+    // methods:
+    // check method
     private boolean checkWeekend(LocalDate today) {
         DayOfWeek dayOfWeek = today.getDayOfWeek();
         return dayOfWeek == DayOfWeek.SATURDAY || dayOfWeek == DayOfWeek.SUNDAY;
     }
 
-
-
-    // methods:
     // getters
-    public AppointmentDay getDay (int dateNr) {
-        return month.get(dateNr);
-    }
     public AppointmentDay getDate (LocalDate date) {
         return month.get(date.getDayOfMonth());
     }
@@ -75,6 +72,18 @@ public class Calendar {
         System.out.println("---------------------");
     }
 
+    public boolean isAvailable(LocalDate date, int time) {
+        if (getDate(date).getAppointmentArrNr(time).booked) {
+            return false;
+        } else if (getDate(date).getAppointmentArrNr(time).cancelled) {
+            return false;
+        } else if (getDate(date).getAppointmentArrNr(time).holiday) {
+            return false;
+        } else if (getDate(date).getAppointmentArrNr(time).weekend) {
+            return false;
+        } else
+        return true;
+    }
 }
 
 class TestCalendar {
