@@ -16,6 +16,14 @@ public class UserInterface {
         menu.displayMenu();
     }
 
+    public void showBookingConfirmation(String customerName, LocalDate dateInput, String timeInput) {
+        System.out.println("Booked: " + customerName + " on " + dateInput.toString() + " at " + timeInput + "!\n");
+    }
+
+    public void showAppointmentNotAvailableMessage() {
+        System.out.println("Appointment not available, please try again.");
+    }
+
     public static class CalGrid {
         // instance variables
         private LocalDate firstDay;
@@ -27,9 +35,11 @@ public class UserInterface {
 
         ArrayList<AppointmentDay> daysObjects = new ArrayList<>(5);
 
+        Processor ioProcess;
 
         // constructor
-        public CalGrid(ArrayList<AppointmentDay> daysObjects, LocalDate firstDay) {
+        public CalGrid(ArrayList<AppointmentDay> daysObjects, LocalDate firstDay, Processor ioProcess) {
+            this.ioProcess = ioProcess;
             this.daysObjects = daysObjects;
             initializeGrid();
             setDaysArray(firstDay);
@@ -55,7 +65,7 @@ public class UserInterface {
         }
 
         public void updateCalGrid () {
-            Processor ioProcess = new Processor();
+
             this.daysObjects = ioProcess.getCalDays(firstDay, 5);
             setDaysArray(firstDay);
 
@@ -146,11 +156,4 @@ public class UserInterface {
 
 }
 
-class testUI {
-    public static void main(String[] args) {
-        UserInterface ui = new UserInterface();
-        UserInterface.CalGrid calGrid = new UserInterface.CalGrid(new Calendar().getDays(LocalDate.now(), 5), LocalDate.now());
-        calGrid.showCalGrid();
 
-    }
-}

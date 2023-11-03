@@ -14,9 +14,9 @@ import java.util.ArrayList;
 */
 
 public class Calendar {
-    public ArrayList<AppointmentDay> month ;
+    // instance variables:
+    public ArrayList<AppointmentDay> month;
     AppointmentDay day;
-    LocalDate date;
     LocalDate today = LocalDate.now();
 
     // constructor:
@@ -40,6 +40,9 @@ public class Calendar {
     }
 
     // methods:
+
+
+
     // check method
     private boolean checkWeekend(LocalDate today) {
         DayOfWeek dayOfWeek = today.getDayOfWeek();

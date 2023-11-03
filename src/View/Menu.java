@@ -4,13 +4,13 @@ package src.View;
 public class Menu {
     UserInputScanner userInputScanner;
     UserInterface ui;
+
     int choice;
     String userName;
 
     public Menu() {
         this.userInputScanner = new UserInputScanner();
         userName = userInputScanner.getNameInput("user name");
-
     }
 
     public void displayMenu() {

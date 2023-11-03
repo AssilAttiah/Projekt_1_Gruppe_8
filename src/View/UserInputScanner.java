@@ -107,16 +107,6 @@ public class UserInputScanner {
         return null;
     }
 
-    public double getDoubleInput(){
-        try {
-            return scanner.nextDouble();
-        } catch (Exception e) {
-            System.out.println("Error: " + e);
-        }
-
-        return 0;
-    }
-
     public LocalDate getDateInput(){
         return nextDate();
     }

@@ -47,11 +47,6 @@ public class AppointmentDay {
             i++;
         }
     }
-    public void clearDay() { // delete method for clearing appointments of the day
-        for (Appointment appointment : appointments) {
-            appointment.cancel();
-        }
-    }
 
     // getters:
     public boolean getIsWeekend() {
@@ -95,7 +90,6 @@ public class AppointmentDay {
         } // for-loop
         return availableTimeSlots;
     }
-
 
     // setters:
     public void setDate(LocalDate date) {

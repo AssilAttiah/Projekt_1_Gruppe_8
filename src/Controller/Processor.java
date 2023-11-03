@@ -15,63 +15,51 @@ import src.View.UserInterface;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Processor {
     // instance variables:
-    LocalDate now;
-    int daysFromNow;
-    int dateNr;
     LocalDate date;
     int time;
     LocalDate newDate;
     int newTime;
-    static boolean isFound;
-    String customerName;
+    boolean isFound;
 
     // objects for integrations with View and Model:
     public static Calendar calendar = new Calendar();
-    IOProcessing io = new IOProcessing();
+    IOProcessor io = new IOProcessor();
     UserInputScanner userInputScanner = new UserInputScanner();
     UserInterface ui = new UserInterface();
     UserInterface.CalGrid calGrid;
 
-    // constructor:
-    public Processor() {
-        this.now = LocalDate.now();
-    }
-
     // Methods:
-
     // 1. subMenu methods:
     public void createBooking (String customerName) {
         io.getDateTime();
         io.processBooking(customerName, date, time);
     }
     public void createCalGridBooking (LocalDate date, String customerName) {
+        boolean bookingCreated = false;
+        while (!bookingCreated) {
+            String[] times = UserInterface.CalGrid.times;
+            String[] days = UserInterface.CalGrid.days;
 
-        String[] times = UserInterface.CalGrid.times;
-        String[] days = UserInterface.CalGrid.days;
+            System.out.println("\nEnter Day (MON/TUE/WED/THU/FRI)");
+            String inputDay = userInputScanner.getDayInput();
 
-        System.out.println("\nEnter Day (MON/TUE/WED/THU/FRI)");
-        String inputDay = userInputScanner.getDayInput();
+            System.out.println("\nEnter Time (10/11/12/13/14/15/16/17)");
+            int inputTime = userInputScanner.getTimeInput();
 
-        System.out.println("\nEnter Time (10/11/12/13/14/15/16/17)");
-        int inputTime = userInputScanner.getTimeInput();
+            LocalDate dateInput = calGrid.getDate(inputDay);
+            int timeInput = calGrid.getTime(inputTime);
 
-        LocalDate dateInput = calGrid.getDate(inputDay);
-        int timeInput = calGrid.getTime(inputTime);
-
-
-        if (!calendar.isAvailable(dateInput, timeInput)) {
-            System.out.println("Appointment not available.");
-            System.out.println("Try again.");
-            createCalGridBooking(date, customerName);
-        } else {
-            io.processBooking(customerName, dateInput, timeInput);
-            System.out.println("Booked: "+ customerName + " on " + dateInput.toString() + " at " + times[timeInput] + "!\n");
+            if (calendar.isAvailable(dateInput, timeInput)) {
+                io.processBooking(customerName, dateInput, timeInput);
+                ui.showBookingConfirmation(customerName, dateInput, times[timeInput]);
+                bookingCreated = true;
+            } else {
+                ui.showAppointmentNotAvailableMessage();
+            }
         }
-
     }
 
     public void registerHoliday(LocalDate date) {
@@ -103,25 +91,20 @@ public class Processor {
     public void payLater(String customerName){
         io.findAppointmentWhileLoop();
         io.getAppointment(date, time).useCreditDelayPayment();
-
-
     }
 
     // 2. display methods:
     public void showCalGrid(LocalDate firstDate){
-
-        calGrid = new UserInterface.CalGrid(calendar.getDays(firstDate, 5), firstDate);
-
+        calGrid = new UserInterface.CalGrid(calendar.getDays(firstDate, 5), firstDate, this);
         calGrid.showCalGrid();
+    }
+    public void showCalGridInfo() {
+        System.out.println("Info: - = available, X = booked, H = holiday, W = weekend\n");
     }
 
     // 3. get methods:
     public ArrayList<AppointmentDay> getCalDays (LocalDate date, int nrOfDays) {
         return calendar.getDays(date, nrOfDays);
-    }
-
-    public void showCalGridInfo() {
-        System.out.println("Info: - = available, X = booked, H = holiday, W = weekend\n");
     }
 
     // inner Class IOProcessing for InputOutputProcess:
@@ -134,10 +117,9 @@ public class Processor {
             UI User input -> IO Process -> Model
             UI information <- IO Process <- Model
      */
-    private class IOProcessing {
+    private class IOProcessor {
         // Methods:
         // 1. appointment methods:
-
         private void findAppointmentWhileLoop() {
             System.out.println("Lets find your appointment!");
             getDateTime();
@@ -161,12 +143,12 @@ public class Processor {
 
         private void newAppointment () {
             getNewDateTime();
-
         }
 
         // 2. process methods:
         public void processBooking(String customerName, LocalDate date, int time) {
             calendar.getDate(date).getAppointment(time).book(customerName);
+
         }
 
         // 3. date methods:

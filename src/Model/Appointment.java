@@ -13,9 +13,9 @@ import java.awt.*;
 */
 
 public class Appointment {
-    public boolean holiday;
+    public boolean holiday = false;
     public boolean booked = false;
-    public boolean weekend;
+    public boolean weekend = false;
     public boolean cancelled = false;
 
     private boolean paid = true;
