@@ -13,7 +13,8 @@ import static src.Controller.Processor.calendar;
 public class UserInterface {
 
     public void startProgram(){
-        System.out.println("Harry's Salon Electronic Booking System");
+        System.out.println("Welcome to Harry's Salon Electronic Booking System");
+        System.out.println("--------------------------------------------------\n");
         Menu menu = new Menu();
         menu.displayMenu();
     }

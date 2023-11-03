@@ -102,7 +102,7 @@ public class Processor {
         calGrid.showCalGrid();
     }
     public void showCalGridInfo() {
-        System.out.println("Info: - = available, X = booked, H = holiday, W = weekend\n");
+        System.out.println("Info: - = available, X = booked, H = holiday\n");
     }
 
     // 3. get methods:
